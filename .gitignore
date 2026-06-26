@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Dataset - do not push large image files
+dataset/raw/
+dataset/processed/
+
+# Models - do not push heavy model files
+models/**/*.pth
+models/**/*.pt
+models/**/*.onnx
+models/**/*.tflite
+models/**/*.h5
+
+# Results generated during experiments
+results/plots/*.png
+results/confusion_matrices/*.png
+results/metrics/*.csv
+
+# Secrets
+.env
+config.json
+raspberry/config.json
+
+# OS files
+.DS_Store
+Thumbs.db

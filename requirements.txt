@@ -1,0 +1,12 @@
+numpy
+pandas
+matplotlib
+scikit-learn
+torch
+torchvision
+timm
+opencv-python
+pillow
+pyyaml
+paho-mqtt
+python-telegram-bot
