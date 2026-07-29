@@ -11,15 +11,21 @@ env/
 .ipynb_checkpoints/
 
 # Dataset - do not push large image files
-dataset/raw/
-dataset/processed/
+dataset/raw/*
+dataset/processed/*
+dataset/rejected/*
+
+# Keek the folders empty
+!dataset/raw/.gitkeep
+!dataset/processed/.gitkeep
+!dataset/rejected/.gitkeep
 
 # Models - do not push heavy model files
-models/**/*.pth
-models/**/*.pt
-models/**/*.onnx
-models/**/*.tflite
-models/**/*.h5
+*.pth
+*.pt
+*.onnx
+*.tflite
+*.h5
 
 # Results generated during experiments
 results/plots/*.png

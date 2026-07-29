@@ -75,7 +75,7 @@ The ESP32-S3-EYE acts as the camera node, while the Raspberry Pi is used as the 
 
 The project evaluates different lightweight neural network architectures for the visual classification task:
 
-1. **Small CNN / MLP baseline**
+1. **MLP baseline**
    A simple lightweight model used as a baseline for comparison.
 
 2. **MCUNet**
@@ -140,7 +140,7 @@ smart-visual-alarm-mountain-house/
 │   └── splits/
 │
 ├── training/
-│   ├── train_baseline_cnn.py
+│   ├── train_mlp.py
 │   ├── train_mcunet.py
 │   ├── train_tinyvit.py
 │   ├── evaluate.py
