@@ -14,6 +14,14 @@ env/
 dataset/raw/*
 dataset/processed/*
 dataset/rejected/*
+dataset/incoming/*
+
+# Keep dataset directory structure
+!dataset/raw/.gitkeep
+!dataset/processed/.gitkeep
+!dataset/rejected/.gitkeep
+!dataset/incoming/.gitkeep
+
 
 # Keek the folders empty
 !dataset/raw/.gitkeep
