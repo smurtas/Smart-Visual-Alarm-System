@@ -2,12 +2,12 @@
 File: training/clean_dataset.py
 
 Description: 
-Validate the images stored in the raw dataset folder. 
-If the image is corrupted or cannot be opened, it will be moved to the rejected folder. 
-Valid images will be moved to the processed folder.
+Validate the images stored in the incoming dataset folder.
+If an image is corrupted or cannot be opened, it is moved to the rejected folder.
+Valid images remain in the incoming folder.
 
-Input:  dataset/raw/ (folder containing raw images)
-Output: dataset/processed/ (folder containing valid images)
+Input:  dataset/incoming/
+Output: dataset/rejected/corrupted/ for invalid images
 
 Project: Smart Visual Alarm System
 """
@@ -19,11 +19,11 @@ from PIL import Image, UnidentifiedImageError
 
 # project directories
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
-RAW_DATASET_DIR = PROJECT_ROOT / "dataset" / "raw"
+INCOMING_DATASET_DIR = PROJECT_ROOT / "dataset" / "incoming"
 REJECTED_DATASET_DIR = PROJECT_ROOT / "dataset" / "rejected"
 
 # Dataset classes
-CLASSES = ["empty","person", "animal"]
+# CLASSES = ["empty","person", "animal"]
 
 # Supported image extensions
 SUPPORTED_EXTENSIONS = [".jpg", ".jpeg", ".png"]
@@ -55,7 +55,7 @@ def is_valid_image(image_path: Path) -> bool:
     except (UnidentifiedImageError, OSError):
         return False
 
-def move_to_rejected(image_path: Path, class_name: str) -> Path:
+def move_to_rejected(image_path: Path) -> Path:
     """
     Move an image to the rejected folder.
     Args:
@@ -64,23 +64,24 @@ def move_to_rejected(image_path: Path, class_name: str) -> Path:
     Returns:
     destination path of the moved image in the rejected folder.
     """
-    class_rejected_dir = REJECTED_DATASET_DIR / class_name
-    class_rejected_dir.mkdir(parents=True, exist_ok=True)
+    corrupted_dir = REJECTED_DATASET_DIR / "corrupted"
+    corrupted_dir.mkdir(parents=True, exist_ok=True)
 
-    destination_path = class_rejected_dir / image_path.name
+    destination_path = corrupted_dir / image_path.name
 
     counter = 1
     while destination_path.exists():
         destination_path = (
-            class_rejected_dir / f"{image_path.stem}_{counter}{image_path.suffix}"
+            corrupted_dir / f"{image_path.stem}_{counter}{image_path.suffix}"
         )
         counter += 1
 
     shutil.move(str(image_path), str(destination_path))
     return destination_path
 
+"""
 def process_class_folder(class_name: str) -> tuple[int, int]:
-    """
+    ""
     Process a class folder by validating its images.
     Args:
     class_name: Name of the class folder to process
@@ -88,8 +89,8 @@ def process_class_folder(class_name: str) -> tuple[int, int]:
     A tuple containing
         - the number of valid images
         - number of rejected images.
-"""
-    class_dir = RAW_DATASET_DIR / class_name
+""
+    class_dir = INCOMING_DATASET_DIR / class_name
 
     if not class_dir.exists():
         print(f"Class directory {class_dir} not found. Skipping.")
@@ -113,7 +114,7 @@ def process_class_folder(class_name: str) -> tuple[int, int]:
                    )
     return valid_count, rejected_count
 
-
+"""
 
 def main() -> None:
     """
@@ -121,20 +122,28 @@ def main() -> None:
     """
 
     print("Starting dataset validation...")
-    print(f"Raw dataset directory: {RAW_DATASET_DIR}")
+    print(f"Incoming dataset directory: {INCOMING_DATASET_DIR}")
     print()
 
     total_valid = 0
     total_rejected = 0
 
-    for class_name in CLASSES:
-        valid_count, rejected_count = process_class_folder(class_name)
-        total_valid += valid_count
-        total_rejected += rejected_count
+    for image_path in INCOMING_DATASET_DIR.rglob("*"):
+        if not image_path.is_file() or not is_supported_image(image_path):
+            continue  # Skip non-files and unsupported extensions
 
-        print(f"Class '{class_name}': {valid_count} valid, {rejected_count} rejected.")
+        if is_valid_image(image_path):
+            total_valid += 1
+        else:
+            destination_path = move_to_rejected(image_path)
+            total_rejected += 1
 
-    print(f"Total: {total_valid} valid, {total_rejected} rejected.")
+            print (f"Rejected:{image_path} "
+                   f"-> {destination_path.relative_to(PROJECT_ROOT)} "
+                   )
+
+    print()
+    print(f"Total: {total_valid} valid,\n {total_rejected} rejected.")
 
 
 if __name__ == "__main__":
