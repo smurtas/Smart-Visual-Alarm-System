@@ -15,6 +15,7 @@ dataset/raw/*
 dataset/processed/*
 dataset/rejected/*
 dataset/incoming/*
+dataset/dark_candidates/*
 
 # Keep dataset directory structure
 !dataset/raw/.gitkeep

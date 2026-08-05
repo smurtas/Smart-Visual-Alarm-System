@@ -9,7 +9,7 @@ Output:
     - dataset/raw/empty/
     - dataset/raw/person/
     - dataset/raw/animal/
-    - dataset/rejected/
+    - dataset/rejected/manual/ (for images that cannot be classified)
     
 Project: Smart Visual Alarm System
 """
@@ -24,7 +24,7 @@ import matplotlib.pyplot as plt
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
 # Directory currently containing all collected images
-RAW_DATASET_DIR = PROJECT_ROOT / "dataset" / "raw" / "empty"
+RAW_DATASET_DIR = PROJECT_ROOT / "dataset" / "incoming" 
 
 # Destination directories for the three classes
 EMPTY_DIR = PROJECT_ROOT / "dataset" / "raw" / "empty"
@@ -32,7 +32,7 @@ PERSON_DIR = PROJECT_ROOT / "dataset" / "raw" / "person"
 ANIMAL_DIR = PROJECT_ROOT / "dataset" / "raw" / "animal"
 
 # Directory for rejected images
-REJECTED_DIR = PROJECT_ROOT / "dataset" / "rejected"
+REJECTED_DIR = PROJECT_ROOT / "dataset" / "rejected" / "manual"
 
 # File extesions accepted by this script
 SUPPORTED_EXTENSIONS = [".jpg", ".jpeg", ".png"]    
@@ -167,7 +167,7 @@ def main() -> None:
     print("1: Empty")
     print("2: Person")
     print("3: Animal")
-    print("4: Rejected")
+    print("r: Rejected")
     print("q: Quit")
     print()
 
