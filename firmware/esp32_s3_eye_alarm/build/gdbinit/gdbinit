@@ -1,0 +1,2 @@
+source /home/pi/Desktop/Smart-Visual-Alarm-System/firmware/esp32_s3_eye_alarm/build/gdbinit/symbols
+source /home/pi/Desktop/Smart-Visual-Alarm-System/firmware/esp32_s3_eye_alarm/build/gdbinit/connect

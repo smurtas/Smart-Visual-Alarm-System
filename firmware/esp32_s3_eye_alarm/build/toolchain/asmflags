@@ -1,0 +1,5 @@
+-mlongcalls
+-fno-builtin-memcpy
+-fno-builtin-memset
+-fno-builtin-bzero
+"-specs=/home/pi/Desktop/Smart-Visual-Alarm-System/firmware/esp32_s3_eye_alarm/build/specs/picolibc.specs"
