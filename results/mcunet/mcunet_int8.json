@@ -1,7 +1,7 @@
 {
     "configs": {
-        "node_Conv_349": {
-            "input": {
+        "/features/features.0/features.0.0/Conv": {
+            "input.1": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -16,10 +16,10 @@
                 "state": "ACTIVATED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 4042401013,
-                "dominator": 4042401013
+                "hash": 2159625780,
+                "dominator": 2159625780
             },
-            "features.0.0.weight": {
+            "onnx::Conv_232": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -34,10 +34,10 @@
                 "state": "ACTIVATED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 3992994788,
-                "dominator": 3992994788
+                "hash": 2268896295,
+                "dominator": 2268896295
             },
-            "features.0.0.weight_bias": {
+            "onnx::Conv_233": {
                 "bit_width": 20,
                 "policy": {
                     "PER_TENSOR": true,
@@ -52,10 +52,10 @@
                 "state": "PASSIVE",
                 "quant_min": -524288,
                 "quant_max": 524287,
-                "hash": 333079319,
-                "dominator": 333079319
+                "hash": 1482696270,
+                "dominator": 1482696270
             },
-            "getitem": {
+            "/features/features.0/features.0.0/Conv_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -70,12 +70,12 @@
                 "state": "OVERLAPPED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 4029583742,
-                "dominator": 1211795874
+                "hash": 4095534041,
+                "dominator": 2550401133
             }
         },
-        "n4": {
-            "getitem": {
+        "/features/features.0/features.0.2/Clip": {
+            "/features/features.0/features.0.0/Conv_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -90,26 +90,8 @@
                 "state": "OVERLAPPED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 1119511113,
-                "dominator": 1211795874
-            },
-            "PPQ_Variable_0": {
-                "bit_width": 8,
-                "policy": {
-                    "PER_TENSOR": true,
-                    "PER_CHANNEL": false,
-                    "LINEAR": true,
-                    "FLOATING": false,
-                    "SYMMETRICAL": true,
-                    "ASYMMETRICAL": false,
-                    "POWER_OF_2": true,
-                    "DYNAMIC": false
-                },
-                "state": "PASSIVE",
-                "quant_min": -128,
-                "quant_max": 127,
-                "hash": 3773684712,
-                "dominator": 3773684712
+                "hash": 2078316344,
+                "dominator": 2550401133
             },
             "PPQ_Variable_15": {
                 "bit_width": 8,
@@ -126,10 +108,28 @@
                 "state": "PASSIVE",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 528395019,
-                "dominator": 528395019
+                "hash": 4200053019,
+                "dominator": 4200053019
             },
-            "hardtanh": {
+            "PPQ_Variable_0": {
+                "bit_width": 8,
+                "policy": {
+                    "PER_TENSOR": true,
+                    "PER_CHANNEL": false,
+                    "LINEAR": true,
+                    "FLOATING": false,
+                    "SYMMETRICAL": true,
+                    "ASYMMETRICAL": false,
+                    "POWER_OF_2": true,
+                    "DYNAMIC": false
+                },
+                "state": "PASSIVE",
+                "quant_min": -128,
+                "quant_max": 127,
+                "hash": 2308677490,
+                "dominator": 2308677490
+            },
+            "/features/features.0/features.0.2/Clip_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -144,12 +144,12 @@
                 "state": "ACTIVATED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 1211795874,
-                "dominator": 1211795874
+                "hash": 2550401133,
+                "dominator": 2550401133
             }
         },
-        "node_Conv_351": {
-            "hardtanh": {
+        "/features/features.1/block/block.0/block.0.0/Conv": {
+            "/features/features.0/features.0.2/Clip_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -164,10 +164,10 @@
                 "state": "OVERLAPPED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 1357646301,
-                "dominator": 1211795874
+                "hash": 1671330172,
+                "dominator": 2550401133
             },
-            "features.1.block.0.0.weight": {
+            "onnx::Conv_235": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -182,10 +182,10 @@
                 "state": "ACTIVATED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 3717739820,
-                "dominator": 3717739820
+                "hash": 1510220367,
+                "dominator": 1510220367
             },
-            "features.1.block.0.0.weight_bias": {
+            "onnx::Conv_236": {
                 "bit_width": 20,
                 "policy": {
                     "PER_TENSOR": true,
@@ -200,10 +200,10 @@
                 "state": "PASSIVE",
                 "quant_min": -524288,
                 "quant_max": 524287,
-                "hash": 1963044671,
-                "dominator": 1963044671
+                "hash": 1914975190,
+                "dominator": 1914975190
             },
-            "getitem_3": {
+            "/features/features.1/block/block.0/block.0.0/Conv_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -218,12 +218,12 @@
                 "state": "OVERLAPPED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 560680198,
-                "dominator": 193224618
+                "hash": 3808484161,
+                "dominator": 2752368725
             }
         },
-        "n4_2": {
-            "getitem_3": {
+        "/features/features.1/block/block.0/block.0.2/Clip": {
+            "/features/features.1/block/block.0/block.0.0/Conv_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -238,26 +238,8 @@
                 "state": "OVERLAPPED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 57429937,
-                "dominator": 193224618
-            },
-            "PPQ_Variable_1": {
-                "bit_width": 8,
-                "policy": {
-                    "PER_TENSOR": true,
-                    "PER_CHANNEL": false,
-                    "LINEAR": true,
-                    "FLOATING": false,
-                    "SYMMETRICAL": true,
-                    "ASYMMETRICAL": false,
-                    "POWER_OF_2": true,
-                    "DYNAMIC": false
-                },
-                "state": "PASSIVE",
-                "quant_min": -128,
-                "quant_max": 127,
-                "hash": 2854204336,
-                "dominator": 2854204336
+                "hash": 589582592,
+                "dominator": 2752368725
             },
             "PPQ_Variable_16": {
                 "bit_width": 8,
@@ -274,10 +256,28 @@
                 "state": "PASSIVE",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 2291286963,
-                "dominator": 2291286963
+                "hash": 792570819,
+                "dominator": 792570819
             },
-            "hardtanh_1": {
+            "PPQ_Variable_1": {
+                "bit_width": 8,
+                "policy": {
+                    "PER_TENSOR": true,
+                    "PER_CHANNEL": false,
+                    "LINEAR": true,
+                    "FLOATING": false,
+                    "SYMMETRICAL": true,
+                    "ASYMMETRICAL": false,
+                    "POWER_OF_2": true,
+                    "DYNAMIC": false
+                },
+                "state": "PASSIVE",
+                "quant_min": -128,
+                "quant_max": 127,
+                "hash": 3612764026,
+                "dominator": 3612764026
+            },
+            "/features/features.1/block/block.0/block.0.2/Clip_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -292,12 +292,12 @@
                 "state": "ACTIVATED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 193224618,
-                "dominator": 193224618
+                "hash": 2752368725,
+                "dominator": 2752368725
             }
         },
-        "node_Conv_353": {
-            "hardtanh_1": {
+        "/features/features.1/block/block.1/block.1.0/Conv": {
+            "/features/features.1/block/block.0/block.0.2/Clip_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -312,10 +312,10 @@
                 "state": "OVERLAPPED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 637577157,
-                "dominator": 193224618
+                "hash": 810729924,
+                "dominator": 2752368725
             },
-            "features.1.block.1.0.weight": {
+            "onnx::Conv_238": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -330,10 +330,10 @@
                 "state": "ACTIVATED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 2986605428,
-                "dominator": 2986605428
+                "hash": 2951899511,
+                "dominator": 2951899511
             },
-            "features.1.block.1.0.weight_bias": {
+            "onnx::Conv_239": {
                 "bit_width": 20,
                 "policy": {
                     "PER_TENSOR": true,
@@ -348,10 +348,10 @@
                 "state": "PASSIVE",
                 "quant_min": -524288,
                 "quant_max": 524287,
-                "hash": 3946937447,
-                "dominator": 3946937447
+                "hash": 2427977310,
+                "dominator": 2427977310
             },
-            "getitem_6": {
+            "/features/features.1/block/block.1/block.1.0/Conv_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -366,12 +366,12 @@
                 "state": "PASSIVE",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 413304206,
-                "dominator": 413304206
+                "hash": 682204073,
+                "dominator": 682204073
             }
         },
-        "node_add": {
-            "getitem_6": {
+        "/features/features.1/Add": {
+            "/features/features.1/block/block.1/block.1.0/Conv_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -386,10 +386,10 @@
                 "state": "PASSIVE",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 1919075865,
-                "dominator": 1919075865
+                "hash": 1719513032,
+                "dominator": 1719513032
             },
-            "hardtanh": {
+            "/features/features.0/features.0.2/Clip_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -404,10 +404,10 @@
                 "state": "PASSIVE",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 937947256,
-                "dominator": 937947256
+                "hash": 1052159851,
+                "dominator": 1052159851
             },
-            "add": {
+            "/features/features.1/Add_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -422,12 +422,12 @@
                 "state": "ACTIVATED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 3317083483,
-                "dominator": 3317083483
+                "hash": 3638295682,
+                "dominator": 3638295682
             }
         },
-        "node_Conv_355": {
-            "add": {
+        "/features/features.2/block/block.0/block.0.0/Conv": {
+            "/features/features.1/Add_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -442,10 +442,10 @@
                 "state": "OVERLAPPED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 1025491634,
-                "dominator": 3317083483
+                "hash": 3660263741,
+                "dominator": 3638295682
             },
-            "features.2.block.0.0.weight": {
+            "onnx::Conv_241": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -460,10 +460,10 @@
                 "state": "ACTIVATED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 9739949,
-                "dominator": 9739949
+                "hash": 2121285388,
+                "dominator": 2121285388
             },
-            "features.2.block.0.0.weight_bias": {
+            "onnx::Conv_242": {
                 "bit_width": 20,
                 "policy": {
                     "PER_TENSOR": true,
@@ -478,10 +478,10 @@
                 "state": "PASSIVE",
                 "quant_min": -524288,
                 "quant_max": 524287,
-                "hash": 1419097788,
-                "dominator": 1419097788
+                "hash": 314118559,
+                "dominator": 314118559
             },
-            "getitem_9": {
+            "/features/features.2/block/block.0/block.0.0/Conv_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -496,12 +496,12 @@
                 "state": "OVERLAPPED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 3944966799,
-                "dominator": 410486787
+                "hash": 629581286,
+                "dominator": 3406921354
             }
         },
-        "n4_3": {
-            "getitem_9": {
+        "/features/features.2/block/block.0/block.0.2/Clip": {
+            "/features/features.2/block/block.0/block.0.0/Conv_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -516,26 +516,8 @@
                 "state": "OVERLAPPED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 3870776086,
-                "dominator": 410486787
-            },
-            "PPQ_Variable_2": {
-                "bit_width": 8,
-                "policy": {
-                    "PER_TENSOR": true,
-                    "PER_CHANNEL": false,
-                    "LINEAR": true,
-                    "FLOATING": false,
-                    "SYMMETRICAL": true,
-                    "ASYMMETRICAL": false,
-                    "POWER_OF_2": true,
-                    "DYNAMIC": false
-                },
-                "state": "PASSIVE",
-                "quant_min": -128,
-                "quant_max": 127,
-                "hash": 292840833,
-                "dominator": 292840833
+                "hash": 1163248913,
+                "dominator": 3406921354
             },
             "PPQ_Variable_17": {
                 "bit_width": 8,
@@ -552,10 +534,28 @@
                 "state": "PASSIVE",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 3879907904,
-                "dominator": 3879907904
+                "hash": 1202770832,
+                "dominator": 1202770832
             },
-            "hardtanh_2": {
+            "PPQ_Variable_2": {
+                "bit_width": 8,
+                "policy": {
+                    "PER_TENSOR": true,
+                    "PER_CHANNEL": false,
+                    "LINEAR": true,
+                    "FLOATING": false,
+                    "SYMMETRICAL": true,
+                    "ASYMMETRICAL": false,
+                    "POWER_OF_2": true,
+                    "DYNAMIC": false
+                },
+                "state": "PASSIVE",
+                "quant_min": -128,
+                "quant_max": 127,
+                "hash": 2616615955,
+                "dominator": 2616615955
+            },
+            "/features/features.2/block/block.0/block.0.2/Clip_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -570,12 +570,12 @@
                 "state": "ACTIVATED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 410486787,
-                "dominator": 410486787
+                "hash": 3406921354,
+                "dominator": 3406921354
             }
         },
-        "node_Conv_357": {
-            "hardtanh_2": {
+        "/features/features.2/block/block.1/block.1.0/Conv": {
+            "/features/features.2/block/block.0/block.0.2/Clip_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -590,10 +590,10 @@
                 "state": "OVERLAPPED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 250204858,
-                "dominator": 410486787
+                "hash": 3224161061,
+                "dominator": 3406921354
             },
-            "features.2.block.1.0.weight": {
+            "onnx::Conv_244": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -608,10 +608,10 @@
                 "state": "ACTIVATED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 1737526933,
-                "dominator": 1737526933
+                "hash": 117772628,
+                "dominator": 117772628
             },
-            "features.2.block.1.0.weight_bias": {
+            "onnx::Conv_245": {
                 "bit_width": 20,
                 "policy": {
                     "PER_TENSOR": true,
@@ -626,10 +626,10 @@
                 "state": "PASSIVE",
                 "quant_min": -524288,
                 "quant_max": 524287,
-                "hash": 3675490052,
-                "dominator": 3675490052
+                "hash": 2007874247,
+                "dominator": 2007874247
             },
-            "getitem_12": {
+            "/features/features.2/block/block.1/block.1.0/Conv_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -644,12 +644,12 @@
                 "state": "OVERLAPPED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 869603767,
-                "dominator": 2688840619
+                "hash": 4010756718,
+                "dominator": 2385513874
             }
         },
-        "n4_4": {
-            "getitem_12": {
+        "/features/features.2/block/block.1/block.1.2/Clip": {
+            "/features/features.2/block/block.1/block.1.0/Conv_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -664,26 +664,8 @@
                 "state": "OVERLAPPED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 1285615006,
-                "dominator": 2688840619
-            },
-            "PPQ_Variable_3": {
-                "bit_width": 8,
-                "policy": {
-                    "PER_TENSOR": true,
-                    "PER_CHANNEL": false,
-                    "LINEAR": true,
-                    "FLOATING": false,
-                    "SYMMETRICAL": true,
-                    "ASYMMETRICAL": false,
-                    "POWER_OF_2": true,
-                    "DYNAMIC": false
-                },
-                "state": "PASSIVE",
-                "quant_min": -128,
-                "quant_max": 127,
-                "hash": 2721828329,
-                "dominator": 2721828329
+                "hash": 570947449,
+                "dominator": 2385513874
             },
             "PPQ_Variable_18": {
                 "bit_width": 8,
@@ -700,10 +682,28 @@
                 "state": "PASSIVE",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 1709185288,
-                "dominator": 1709185288
+                "hash": 2654329944,
+                "dominator": 2654329944
             },
-            "hardtanh_3": {
+            "PPQ_Variable_3": {
+                "bit_width": 8,
+                "policy": {
+                    "PER_TENSOR": true,
+                    "PER_CHANNEL": false,
+                    "LINEAR": true,
+                    "FLOATING": false,
+                    "SYMMETRICAL": true,
+                    "ASYMMETRICAL": false,
+                    "POWER_OF_2": true,
+                    "DYNAMIC": false
+                },
+                "state": "PASSIVE",
+                "quant_min": -128,
+                "quant_max": 127,
+                "hash": 152332731,
+                "dominator": 152332731
+            },
+            "/features/features.2/block/block.1/block.1.2/Clip_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -718,12 +718,12 @@
                 "state": "ACTIVATED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 2688840619,
-                "dominator": 2688840619
+                "hash": 2385513874,
+                "dominator": 2385513874
             }
         },
-        "node_Conv_359": {
-            "hardtanh_3": {
+        "/features/features.2/block/block.2/block.2.0/Conv": {
+            "/features/features.2/block/block.1/block.1.2/Clip_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -738,10 +738,10 @@
                 "state": "OVERLAPPED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 2836639682,
-                "dominator": 2688840619
+                "hash": 1105673741,
+                "dominator": 2385513874
             },
-            "features.2.block.2.0.weight": {
+            "onnx::Conv_247": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -756,10 +756,10 @@
                 "state": "ACTIVATED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 1323374461,
-                "dominator": 1323374461
+                "hash": 1628657820,
+                "dominator": 1628657820
             },
-            "features.2.block.2.0.weight_bias": {
+            "onnx::Conv_248": {
                 "bit_width": 20,
                 "policy": {
                     "PER_TENSOR": true,
@@ -774,10 +774,10 @@
                 "state": "PASSIVE",
                 "quant_min": -524288,
                 "quant_max": 524287,
-                "hash": 607620172,
-                "dominator": 607620172
+                "hash": 172623087,
+                "dominator": 172623087
             },
-            "getitem_15": {
+            "/features/features.2/block/block.2/block.2.0/Conv_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -792,12 +792,12 @@
                 "state": "ACTIVATED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 4188547551,
-                "dominator": 4188547551
+                "hash": 2573536246,
+                "dominator": 2573536246
             }
         },
-        "node_Conv_361": {
-            "getitem_15": {
+        "/features/features.3/block/block.0/block.0.0/Conv": {
+            "/features/features.2/block/block.2/block.2.0/Conv_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -812,10 +812,10 @@
                 "state": "OVERLAPPED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 1005215014,
-                "dominator": 4188547551
+                "hash": 788976353,
+                "dominator": 2573536246
             },
-            "features.3.block.0.0.weight": {
+            "onnx::Conv_250": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -830,10 +830,10 @@
                 "state": "ACTIVATED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 2761400145,
-                "dominator": 2761400145
+                "hash": 3149457952,
+                "dominator": 3149457952
             },
-            "features.3.block.0.0.weight_bias": {
+            "onnx::Conv_251": {
                 "bit_width": 20,
                 "policy": {
                     "PER_TENSOR": true,
@@ -848,10 +848,10 @@
                 "state": "PASSIVE",
                 "quant_min": -524288,
                 "quant_max": 524287,
-                "hash": 916735184,
-                "dominator": 916735184
+                "hash": 2844549219,
+                "dominator": 2844549219
             },
-            "getitem_18": {
+            "/features/features.3/block/block.0/block.0.0/Conv_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -866,12 +866,12 @@
                 "state": "OVERLAPPED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 3438350419,
-                "dominator": 546454279
+                "hash": 1850001818,
+                "dominator": 783223422
             }
         },
-        "n4_5": {
-            "getitem_18": {
+        "/features/features.3/block/block.0/block.0.2/Clip": {
+            "/features/features.3/block/block.0/block.0.0/Conv_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -886,26 +886,8 @@
                 "state": "OVERLAPPED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 3533863370,
-                "dominator": 546454279
-            },
-            "PPQ_Variable_4": {
-                "bit_width": 8,
-                "policy": {
-                    "PER_TENSOR": true,
-                    "PER_CHANNEL": false,
-                    "LINEAR": true,
-                    "FLOATING": false,
-                    "SYMMETRICAL": true,
-                    "ASYMMETRICAL": false,
-                    "POWER_OF_2": true,
-                    "DYNAMIC": false
-                },
-                "state": "PASSIVE",
-                "quant_min": -128,
-                "quant_max": 127,
-                "hash": 502716773,
-                "dominator": 502716773
+                "hash": 1471359477,
+                "dominator": 783223422
             },
             "PPQ_Variable_19": {
                 "bit_width": 8,
@@ -922,10 +904,28 @@
                 "state": "PASSIVE",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 3291473556,
-                "dominator": 3291473556
+                "hash": 236008676,
+                "dominator": 236008676
             },
-            "hardtanh_4": {
+            "PPQ_Variable_4": {
+                "bit_width": 8,
+                "policy": {
+                    "PER_TENSOR": true,
+                    "PER_CHANNEL": false,
+                    "LINEAR": true,
+                    "FLOATING": false,
+                    "SYMMETRICAL": true,
+                    "ASYMMETRICAL": false,
+                    "POWER_OF_2": true,
+                    "DYNAMIC": false
+                },
+                "state": "PASSIVE",
+                "quant_min": -128,
+                "quant_max": 127,
+                "hash": 111906839,
+                "dominator": 111906839
+            },
+            "/features/features.3/block/block.0/block.0.2/Clip_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -940,12 +940,12 @@
                 "state": "ACTIVATED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 546454279,
-                "dominator": 546454279
+                "hash": 783223422,
+                "dominator": 783223422
             }
         },
-        "node_Conv_363": {
-            "hardtanh_4": {
+        "/features/features.3/block/block.1/block.1.0/Conv": {
+            "/features/features.3/block/block.0/block.0.2/Clip_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -960,10 +960,10 @@
                 "state": "OVERLAPPED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 657639854,
-                "dominator": 546454279
+                "hash": 308082505,
+                "dominator": 783223422
             },
-            "features.3.block.1.0.weight": {
+            "onnx::Conv_253": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -978,10 +978,10 @@
                 "state": "ACTIVATED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 1697282489,
-                "dominator": 1697282489
+                "hash": 1620712680,
+                "dominator": 1620712680
             },
-            "features.3.block.1.0.weight_bias": {
+            "onnx::Conv_254": {
                 "bit_width": 20,
                 "policy": {
                     "PER_TENSOR": true,
@@ -996,10 +996,10 @@
                 "state": "PASSIVE",
                 "quant_min": -524288,
                 "quant_max": 524287,
-                "hash": 2250724760,
-                "dominator": 2250724760
+                "hash": 616425483,
+                "dominator": 616425483
             },
-            "getitem_21": {
+            "/features/features.3/block/block.1/block.1.0/Conv_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -1014,12 +1014,12 @@
                 "state": "OVERLAPPED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 3778346491,
-                "dominator": 2259479855
+                "hash": 3148927650,
+                "dominator": 1470653958
             }
         },
-        "n4_6": {
-            "getitem_21": {
+        "/features/features.3/block/block.1/block.1.2/Clip": {
+            "/features/features.3/block/block.1/block.1.0/Conv_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -1034,26 +1034,8 @@
                 "state": "OVERLAPPED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 1777291474,
-                "dominator": 2259479855
-            },
-            "PPQ_Variable_5": {
-                "bit_width": 8,
-                "policy": {
-                    "PER_TENSOR": true,
-                    "PER_CHANNEL": false,
-                    "LINEAR": true,
-                    "FLOATING": false,
-                    "SYMMETRICAL": true,
-                    "ASYMMETRICAL": false,
-                    "POWER_OF_2": true,
-                    "DYNAMIC": false
-                },
-                "state": "PASSIVE",
-                "quant_min": -128,
-                "quant_max": 127,
-                "hash": 1179022413,
-                "dominator": 1179022413
+                "hash": 1022176989,
+                "dominator": 1470653958
             },
             "PPQ_Variable_20": {
                 "bit_width": 8,
@@ -1070,10 +1052,28 @@
                 "state": "PASSIVE",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 1092531676,
-                "dominator": 1092531676
+                "hash": 3597190700,
+                "dominator": 3597190700
             },
-            "hardtanh_5": {
+            "PPQ_Variable_5": {
+                "bit_width": 8,
+                "policy": {
+                    "PER_TENSOR": true,
+                    "PER_CHANNEL": false,
+                    "LINEAR": true,
+                    "FLOATING": false,
+                    "SYMMETRICAL": true,
+                    "ASYMMETRICAL": false,
+                    "POWER_OF_2": true,
+                    "DYNAMIC": false
+                },
+                "state": "PASSIVE",
+                "quant_min": -128,
+                "quant_max": 127,
+                "hash": 2752773183,
+                "dominator": 2752773183
+            },
+            "/features/features.3/block/block.1/block.1.2/Clip_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -1088,12 +1088,12 @@
                 "state": "ACTIVATED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 2259479855,
-                "dominator": 2259479855
+                "hash": 1470653958,
+                "dominator": 1470653958
             }
         },
-        "node_Conv_365": {
-            "hardtanh_5": {
+        "/features/features.3/block/block.2/block.2.0/Conv": {
+            "/features/features.3/block/block.1/block.1.2/Clip_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -1108,10 +1108,10 @@
                 "state": "OVERLAPPED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 581784374,
-                "dominator": 2259479855
+                "hash": 3864593585,
+                "dominator": 1470653958
             },
-            "features.3.block.2.0.weight": {
+            "onnx::Conv_256": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -1126,10 +1126,10 @@
                 "state": "ACTIVATED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 2614820129,
-                "dominator": 2614820129
+                "hash": 7181488,
+                "dominator": 7181488
             },
-            "features.3.block.2.0.weight_bias": {
+            "onnx::Conv_257": {
                 "bit_width": 20,
                 "policy": {
                     "PER_TENSOR": true,
@@ -1144,10 +1144,10 @@
                 "state": "PASSIVE",
                 "quant_min": -524288,
                 "quant_max": 524287,
-                "hash": 1328900960,
-                "dominator": 1328900960
+                "hash": 3630997683,
+                "dominator": 3630997683
             },
-            "getitem_24": {
+            "/features/features.3/block/block.2/block.2.0/Conv_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -1162,12 +1162,12 @@
                 "state": "PASSIVE",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 2234244259,
-                "dominator": 2234244259
+                "hash": 866732202,
+                "dominator": 866732202
             }
         },
-        "node_add_1": {
-            "getitem_24": {
+        "/features/features.3/Add": {
+            "/features/features.3/block/block.2/block.2.0/Conv_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -1182,10 +1182,10 @@
                 "state": "PASSIVE",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 2905035994,
-                "dominator": 2905035994
+                "hash": 913697989,
+                "dominator": 913697989
             },
-            "getitem_15": {
+            "/features/features.2/block/block.2/block.2.0/Conv_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -1200,10 +1200,10 @@
                 "state": "PASSIVE",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 1774749749,
-                "dominator": 1774749749
+                "hash": 1979198580,
+                "dominator": 1979198580
             },
-            "add_1": {
+            "/features/features.3/Add_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -1218,12 +1218,12 @@
                 "state": "ACTIVATED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 2677676580,
-                "dominator": 2677676580
+                "hash": 258533735,
+                "dominator": 258533735
             }
         },
-        "node_Conv_367": {
-            "add_1": {
+        "/features/features.4/block/block.0/block.0.0/Conv": {
+            "/features/features.3/Add_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -1238,10 +1238,10 @@
                 "state": "OVERLAPPED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 1588977751,
-                "dominator": 2677676580
+                "hash": 1814052494,
+                "dominator": 258533735
             },
-            "features.4.block.0.0.weight": {
+            "onnx::Conv_259": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -1256,10 +1256,10 @@
                 "state": "ACTIVATED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 3567327678,
-                "dominator": 3567327678
+                "hash": 135109401,
+                "dominator": 135109401
             },
-            "features.4.block.0.0.weight_bias": {
+            "onnx::Conv_260": {
                 "bit_width": 20,
                 "policy": {
                     "PER_TENSOR": true,
@@ -1274,10 +1274,10 @@
                 "state": "PASSIVE",
                 "quant_min": -524288,
                 "quant_max": 524287,
-                "hash": 2589182345,
-                "dominator": 2589182345
+                "hash": 1450930552,
+                "dominator": 1450930552
             },
-            "getitem_27": {
+            "/features/features.4/block/block.0/block.0.0/Conv_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -1292,12 +1292,12 @@
                 "state": "OVERLAPPED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 3478038056,
-                "dominator": 1059861356
+                "hash": 457189979,
+                "dominator": 1974728591
             }
         },
-        "n4_7": {
-            "getitem_27": {
+        "/features/features.4/block/block.0/block.0.2/Clip": {
+            "/features/features.4/block/block.0/block.0.0/Conv_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -1312,26 +1312,8 @@
                 "state": "OVERLAPPED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 1758809163,
-                "dominator": 1059861356
-            },
-            "PPQ_Variable_6": {
-                "bit_width": 8,
-                "policy": {
-                    "PER_TENSOR": true,
-                    "PER_CHANNEL": false,
-                    "LINEAR": true,
-                    "FLOATING": false,
-                    "SYMMETRICAL": true,
-                    "ASYMMETRICAL": false,
-                    "POWER_OF_2": true,
-                    "DYNAMIC": false
-                },
-                "state": "PASSIVE",
-                "quant_min": -128,
-                "quant_max": 127,
-                "hash": 1389077986,
-                "dominator": 1389077986
+                "hash": 951536562,
+                "dominator": 1974728591
             },
             "PPQ_Variable_21": {
                 "bit_width": 8,
@@ -1348,10 +1330,28 @@
                 "state": "PASSIVE",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 293188893,
-                "dominator": 293188893
+                "hash": 3912369069,
+                "dominator": 3912369069
             },
-            "hardtanh_6": {
+            "PPQ_Variable_6": {
+                "bit_width": 8,
+                "policy": {
+                    "PER_TENSOR": true,
+                    "PER_CHANNEL": false,
+                    "LINEAR": true,
+                    "FLOATING": false,
+                    "SYMMETRICAL": true,
+                    "ASYMMETRICAL": false,
+                    "POWER_OF_2": true,
+                    "DYNAMIC": false
+                },
+                "state": "PASSIVE",
+                "quant_min": -128,
+                "quant_max": 127,
+                "hash": 2559674300,
+                "dominator": 2559674300
+            },
+            "/features/features.4/block/block.0/block.0.2/Clip_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -1366,12 +1366,12 @@
                 "state": "ACTIVATED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 1059861356,
-                "dominator": 1059861356
+                "hash": 1974728591,
+                "dominator": 1974728591
             }
         },
-        "node_Conv_369": {
-            "hardtanh_6": {
+        "/features/features.4/block/block.1/block.1.0/Conv": {
+            "/features/features.4/block/block.0/block.0.2/Clip_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -1386,10 +1386,10 @@
                 "state": "OVERLAPPED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 2593043583,
-                "dominator": 1059861356
+                "hash": 1400484886,
+                "dominator": 1974728591
             },
-            "features.4.block.1.0.weight": {
+            "onnx::Conv_262": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -1404,10 +1404,10 @@
                 "state": "ACTIVATED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 904478022,
-                "dominator": 904478022
+                "hash": 1976654465,
+                "dominator": 1976654465
             },
-            "features.4.block.1.0.weight_bias": {
+            "onnx::Conv_263": {
                 "bit_width": 20,
                 "policy": {
                     "PER_TENSOR": true,
@@ -1422,10 +1422,10 @@
                 "state": "PASSIVE",
                 "quant_min": -524288,
                 "quant_max": 524287,
-                "hash": 176389873,
-                "dominator": 176389873
+                "hash": 1245696832,
+                "dominator": 1245696832
             },
-            "getitem_30": {
+            "/features/features.4/block/block.1/block.1.0/Conv_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -1440,12 +1440,12 @@
                 "state": "OVERLAPPED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 1260856816,
-                "dominator": 114500020
+                "hash": 2403607811,
+                "dominator": 513984183
             }
         },
-        "n4_8": {
-            "getitem_30": {
+        "/features/features.4/block/block.1/block.1.2/Clip": {
+            "/features/features.4/block/block.1/block.1.0/Conv_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -1460,26 +1460,8 @@
                 "state": "OVERLAPPED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 4136955123,
-                "dominator": 114500020
-            },
-            "PPQ_Variable_7": {
-                "bit_width": 8,
-                "policy": {
-                    "PER_TENSOR": true,
-                    "PER_CHANNEL": false,
-                    "LINEAR": true,
-                    "FLOATING": false,
-                    "SYMMETRICAL": true,
-                    "ASYMMETRICAL": false,
-                    "POWER_OF_2": true,
-                    "DYNAMIC": false
-                },
-                "state": "PASSIVE",
-                "quant_min": -128,
-                "quant_max": 127,
-                "hash": 1915839466,
-                "dominator": 1915839466
+                "hash": 3677879226,
+                "dominator": 513984183
             },
             "PPQ_Variable_22": {
                 "bit_width": 8,
@@ -1496,10 +1478,28 @@
                 "state": "PASSIVE",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 4091190021,
-                "dominator": 4091190021
+                "hash": 1082790805,
+                "dominator": 1082790805
             },
-            "hardtanh_7": {
+            "PPQ_Variable_7": {
+                "bit_width": 8,
+                "policy": {
+                    "PER_TENSOR": true,
+                    "PER_CHANNEL": false,
+                    "LINEAR": true,
+                    "FLOATING": false,
+                    "SYMMETRICAL": true,
+                    "ASYMMETRICAL": false,
+                    "POWER_OF_2": true,
+                    "DYNAMIC": false
+                },
+                "state": "PASSIVE",
+                "quant_min": -128,
+                "quant_max": 127,
+                "hash": 645593092,
+                "dominator": 645593092
+            },
+            "/features/features.4/block/block.1/block.1.2/Clip_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -1514,12 +1514,12 @@
                 "state": "ACTIVATED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 114500020,
-                "dominator": 114500020
+                "hash": 513984183,
+                "dominator": 513984183
             }
         },
-        "node_Conv_371": {
-            "hardtanh_7": {
+        "/features/features.4/block/block.2/block.2.0/Conv": {
+            "/features/features.4/block/block.1/block.1.2/Clip_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -1534,10 +1534,10 @@
                 "state": "OVERLAPPED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 1706887591,
-                "dominator": 114500020
+                "hash": 892069534,
+                "dominator": 513984183
             },
-            "features.4.block.2.0.weight": {
+            "onnx::Conv_265": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -1552,10 +1552,10 @@
                 "state": "ACTIVATED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 578084302,
-                "dominator": 578084302
+                "hash": 3183403753,
+                "dominator": 3183403753
             },
-            "features.4.block.2.0.weight_bias": {
+            "onnx::Conv_266": {
                 "bit_width": 20,
                 "policy": {
                     "PER_TENSOR": true,
@@ -1570,10 +1570,10 @@
                 "state": "PASSIVE",
                 "quant_min": -524288,
                 "quant_max": 524287,
-                "hash": 1025293657,
-                "dominator": 1025293657
+                "hash": 602593800,
+                "dominator": 602593800
             },
-            "getitem_33": {
+            "/features/features.4/block/block.2/block.2.0/Conv_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -1588,12 +1588,12 @@
                 "state": "ACTIVATED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 589761208,
-                "dominator": 589761208
+                "hash": 2221420715,
+                "dominator": 2221420715
             }
         },
-        "node_Conv_373": {
-            "getitem_33": {
+        "/features/features.5/block/block.0/block.0.0/Conv": {
+            "/features/features.4/block/block.2/block.2.0/Conv_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -1608,10 +1608,10 @@
                 "state": "OVERLAPPED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 364011163,
-                "dominator": 589761208
+                "hash": 2984016066,
+                "dominator": 2221420715
             },
-            "features.5.block.0.0.weight": {
+            "onnx::Conv_268": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -1626,10 +1626,10 @@
                 "state": "ACTIVATED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 1006743282,
-                "dominator": 1006743282
+                "hash": 3840588925,
+                "dominator": 3840588925
             },
-            "features.5.block.0.0.weight_bias": {
+            "onnx::Conv_269": {
                 "bit_width": 20,
                 "policy": {
                     "PER_TENSOR": true,
@@ -1644,10 +1644,10 @@
                 "state": "PASSIVE",
                 "quant_min": -524288,
                 "quant_max": 524287,
-                "hash": 3413105133,
-                "dominator": 3413105133
+                "hash": 3773734220,
+                "dominator": 3773734220
             },
-            "getitem_36": {
+            "/features/features.5/block/block.0/block.0.0/Conv_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -1662,12 +1662,12 @@
                 "state": "OVERLAPPED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 3783329020,
-                "dominator": 938112128
+                "hash": 2533816031,
+                "dominator": 1795157331
             }
         },
-        "n4_9": {
-            "getitem_36": {
+        "/features/features.5/block/block.0/block.0.2/Clip": {
+            "/features/features.5/block/block.0/block.0.0/Conv_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -1682,26 +1682,8 @@
                 "state": "OVERLAPPED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 2951380943,
-                "dominator": 938112128
-            },
-            "PPQ_Variable_8": {
-                "bit_width": 8,
-                "policy": {
-                    "PER_TENSOR": true,
-                    "PER_CHANNEL": false,
-                    "LINEAR": true,
-                    "FLOATING": false,
-                    "SYMMETRICAL": true,
-                    "ASYMMETRICAL": false,
-                    "POWER_OF_2": true,
-                    "DYNAMIC": false
-                },
-                "state": "PASSIVE",
-                "quant_min": -128,
-                "quant_max": 127,
-                "hash": 3116833622,
-                "dominator": 3116833622
+                "hash": 4181849638,
+                "dominator": 1795157331
             },
             "PPQ_Variable_23": {
                 "bit_width": 8,
@@ -1718,10 +1700,28 @@
                 "state": "PASSIVE",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 135668929,
-                "dominator": 135668929
+                "hash": 2083837009,
+                "dominator": 2083837009
             },
-            "hardtanh_8": {
+            "PPQ_Variable_8": {
+                "bit_width": 8,
+                "policy": {
+                    "PER_TENSOR": true,
+                    "PER_CHANNEL": false,
+                    "LINEAR": true,
+                    "FLOATING": false,
+                    "SYMMETRICAL": true,
+                    "ASYMMETRICAL": false,
+                    "POWER_OF_2": true,
+                    "DYNAMIC": false
+                },
+                "state": "PASSIVE",
+                "quant_min": -128,
+                "quant_max": 127,
+                "hash": 283157968,
+                "dominator": 283157968
+            },
+            "/features/features.5/block/block.0/block.0.2/Clip_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -1736,12 +1736,12 @@
                 "state": "ACTIVATED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 938112128,
-                "dominator": 938112128
+                "hash": 1795157331,
+                "dominator": 1795157331
             }
         },
-        "node_Conv_375": {
-            "hardtanh_8": {
+        "/features/features.5/block/block.1/block.1.0/Conv": {
+            "/features/features.5/block/block.0/block.0.2/Clip_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -1756,10 +1756,10 @@
                 "state": "OVERLAPPED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 4242096451,
-                "dominator": 938112128
+                "hash": 2183783114,
+                "dominator": 1795157331
             },
-            "features.5.block.1.0.weight": {
+            "onnx::Conv_271": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -1774,10 +1774,10 @@
                 "state": "ACTIVATED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 2193204986,
-                "dominator": 2193204986
+                "hash": 1111793253,
+                "dominator": 1111793253
             },
-            "features.5.block.1.0.weight_bias": {
+            "onnx::Conv_272": {
                 "bit_width": 20,
                 "policy": {
                     "PER_TENSOR": true,
@@ -1792,10 +1792,10 @@
                 "state": "PASSIVE",
                 "quant_min": -524288,
                 "quant_max": 524287,
-                "hash": 3175223765,
-                "dominator": 3175223765
+                "hash": 1318754196,
+                "dominator": 1318754196
             },
-            "getitem_39": {
+            "/features/features.5/block/block.1/block.1.0/Conv_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -1810,12 +1810,12 @@
                 "state": "OVERLAPPED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 2325478724,
-                "dominator": 2663482184
+                "hash": 3948292103,
+                "dominator": 1447230203
             }
         },
-        "n4_10": {
-            "getitem_39": {
+        "/features/features.5/block/block.1/block.1.2/Clip": {
+            "/features/features.5/block/block.1/block.1.0/Conv_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -1830,26 +1830,8 @@
                 "state": "OVERLAPPED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 3345266423,
-                "dominator": 2663482184
-            },
-            "PPQ_Variable_9": {
-                "bit_width": 8,
-                "policy": {
-                    "PER_TENSOR": true,
-                    "PER_CHANNEL": false,
-                    "LINEAR": true,
-                    "FLOATING": false,
-                    "SYMMETRICAL": true,
-                    "ASYMMETRICAL": false,
-                    "POWER_OF_2": true,
-                    "DYNAMIC": false
-                },
-                "state": "PASSIVE",
-                "quant_min": -128,
-                "quant_max": 127,
-                "hash": 2406946270,
-                "dominator": 2406946270
+                "hash": 2564489902,
+                "dominator": 1447230203
             },
             "PPQ_Variable_24": {
                 "bit_width": 8,
@@ -1866,10 +1848,28 @@
                 "state": "PASSIVE",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 891966761,
-                "dominator": 891966761
+                "hash": 1784008377,
+                "dominator": 1784008377
             },
-            "hardtanh_9": {
+            "PPQ_Variable_9": {
+                "bit_width": 8,
+                "policy": {
+                    "PER_TENSOR": true,
+                    "PER_CHANNEL": false,
+                    "LINEAR": true,
+                    "FLOATING": false,
+                    "SYMMETRICAL": true,
+                    "ASYMMETRICAL": false,
+                    "POWER_OF_2": true,
+                    "DYNAMIC": false
+                },
+                "state": "PASSIVE",
+                "quant_min": -128,
+                "quant_max": 127,
+                "hash": 4164507288,
+                "dominator": 4164507288
+            },
+            "/features/features.5/block/block.1/block.1.2/Clip_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -1884,12 +1884,12 @@
                 "state": "ACTIVATED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 2663482184,
-                "dominator": 2663482184
+                "hash": 1447230203,
+                "dominator": 1447230203
             }
         },
-        "node_Conv_377": {
-            "hardtanh_9": {
+        "/features/features.5/block/block.2/block.2.0/Conv": {
+            "/features/features.5/block/block.1/block.1.2/Clip_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -1904,10 +1904,10 @@
                 "state": "OVERLAPPED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 345584875,
-                "dominator": 2663482184
+                "hash": 3103349202,
+                "dominator": 1447230203
             },
-            "features.5.block.2.0.weight": {
+            "onnx::Conv_274": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -1922,10 +1922,10 @@
                 "state": "ACTIVATED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 321547266,
-                "dominator": 321547266
+                "hash": 512514381,
+                "dominator": 512514381
             },
-            "features.5.block.2.0.weight_bias": {
+            "onnx::Conv_275": {
                 "bit_width": 20,
                 "policy": {
                     "PER_TENSOR": true,
@@ -1940,10 +1940,10 @@
                 "state": "PASSIVE",
                 "quant_min": -524288,
                 "quant_max": 524287,
-                "hash": 1331552957,
-                "dominator": 1331552957
+                "hash": 4162914012,
+                "dominator": 4162914012
             },
-            "getitem_42": {
+            "/features/features.5/block/block.2/block.2.0/Conv_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -1958,12 +1958,12 @@
                 "state": "PASSIVE",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 2860395148,
-                "dominator": 2860395148
+                "hash": 4062837295,
+                "dominator": 4062837295
             }
         },
-        "node_add_2": {
-            "getitem_42": {
+        "/features/features.5/Add": {
+            "/features/features.5/block/block.2/block.2.0/Conv_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -1978,10 +1978,10 @@
                 "state": "PASSIVE",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 60641055,
-                "dominator": 60641055
+                "hash": 1051339830,
+                "dominator": 1051339830
             },
-            "getitem_33": {
+            "/features/features.4/block/block.2/block.2.0/Conv_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -1996,10 +1996,10 @@
                 "state": "PASSIVE",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 2880433510,
-                "dominator": 2880433510
+                "hash": 4236800545,
+                "dominator": 4236800545
             },
-            "add_2": {
+            "/features/features.5/Add_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -2014,12 +2014,12 @@
                 "state": "ACTIVATED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 2153246353,
-                "dominator": 2153246353
+                "hash": 2671840352,
+                "dominator": 2671840352
             }
         },
-        "node_Conv_379": {
-            "add_2": {
+        "/features/features.6/block/block.0/block.0.0/Conv": {
+            "/features/features.5/Add_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -2034,10 +2034,10 @@
                 "state": "OVERLAPPED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 2788185872,
-                "dominator": 2153246353
+                "hash": 2395797923,
+                "dominator": 2671840352
             },
-            "features.6.block.0.0.weight": {
+            "onnx::Conv_277": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -2052,10 +2052,10 @@
                 "state": "ACTIVATED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 3924154771,
-                "dominator": 3924154771
+                "hash": 3002596826,
+                "dominator": 3002596826
             },
-            "features.6.block.0.0.weight_bias": {
+            "onnx::Conv_278": {
                 "bit_width": 20,
                 "policy": {
                     "PER_TENSOR": true,
@@ -2070,10 +2070,10 @@
                 "state": "PASSIVE",
                 "quant_min": -524288,
                 "quant_max": 524287,
-                "hash": 3707313674,
-                "dominator": 3707313674
+                "hash": 3225062709,
+                "dominator": 3225062709
             },
-            "getitem_45": {
+            "/features/features.6/block/block.0/block.0.0/Conv_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -2088,12 +2088,12 @@
                 "state": "OVERLAPPED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 4015254693,
-                "dominator": 643928313
+                "hash": 4103605028,
+                "dominator": 502785832
             }
         },
-        "n4_11": {
-            "getitem_45": {
+        "/features/features.6/block/block.0/block.0.2/Clip": {
+            "/features/features.6/block/block.0/block.0.0/Conv_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -2108,26 +2108,8 @@
                 "state": "OVERLAPPED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 1123396820,
-                "dominator": 643928313
-            },
-            "PPQ_Variable_10": {
-                "bit_width": 8,
-                "policy": {
-                    "PER_TENSOR": true,
-                    "PER_CHANNEL": false,
-                    "LINEAR": true,
-                    "FLOATING": false,
-                    "SYMMETRICAL": true,
-                    "ASYMMETRICAL": false,
-                    "POWER_OF_2": true,
-                    "DYNAMIC": false
-                },
-                "state": "PASSIVE",
-                "quant_min": -128,
-                "quant_max": 127,
-                "hash": 2141841479,
-                "dominator": 2141841479
+                "hash": 2797604183,
+                "dominator": 502785832
             },
             "PPQ_Variable_25": {
                 "bit_width": 8,
@@ -2144,10 +2126,28 @@
                 "state": "PASSIVE",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 1538310638,
-                "dominator": 1538310638
+                "hash": 930517694,
+                "dominator": 930517694
             },
-            "hardtanh_10": {
+            "PPQ_Variable_10": {
+                "bit_width": 8,
+                "policy": {
+                    "PER_TENSOR": true,
+                    "PER_CHANNEL": false,
+                    "LINEAR": true,
+                    "FLOATING": false,
+                    "SYMMETRICAL": true,
+                    "ASYMMETRICAL": false,
+                    "POWER_OF_2": true,
+                    "DYNAMIC": false
+                },
+                "state": "PASSIVE",
+                "quant_min": -128,
+                "quant_max": 127,
+                "hash": 2432130697,
+                "dominator": 2432130697
+            },
+            "/features/features.6/block/block.0/block.0.2/Clip_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -2162,12 +2162,12 @@
                 "state": "ACTIVATED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 643928313,
-                "dominator": 643928313
+                "hash": 502785832,
+                "dominator": 502785832
             }
         },
-        "node_Conv_381": {
-            "hardtanh_10": {
+        "/features/features.6/block/block.1/block.1.0/Conv": {
+            "/features/features.6/block/block.0/block.0.2/Clip_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -2182,10 +2182,10 @@
                 "state": "OVERLAPPED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 711921624,
-                "dominator": 643928313
+                "hash": 891128139,
+                "dominator": 502785832
             },
-            "features.6.block.1.0.weight": {
+            "onnx::Conv_280": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -2200,10 +2200,10 @@
                 "state": "ACTIVATED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 815189819,
-                "dominator": 815189819
+                "hash": 3576098530,
+                "dominator": 3576098530
             },
-            "features.6.block.1.0.weight_bias": {
+            "onnx::Conv_281": {
                 "bit_width": 20,
                 "policy": {
                     "PER_TENSOR": true,
@@ -2218,10 +2218,10 @@
                 "state": "PASSIVE",
                 "quant_min": -524288,
                 "quant_max": 524287,
-                "hash": 3944668434,
-                "dominator": 3944668434
+                "hash": 2764823069,
+                "dominator": 2764823069
             },
-            "getitem_48": {
+            "/features/features.6/block/block.1/block.1.0/Conv_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -2236,12 +2236,12 @@
                 "state": "OVERLAPPED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 146329485,
-                "dominator": 55434337
+                "hash": 3322528876,
+                "dominator": 2744256240
             }
         },
-        "n4_12": {
-            "getitem_48": {
+        "/features/features.6/block/block.1/block.1.2/Clip": {
+            "/features/features.6/block/block.1/block.1.0/Conv_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -2256,26 +2256,8 @@
                 "state": "OVERLAPPED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 1808049180,
-                "dominator": 55434337
-            },
-            "PPQ_Variable_11": {
-                "bit_width": 8,
-                "policy": {
-                    "PER_TENSOR": true,
-                    "PER_CHANNEL": false,
-                    "LINEAR": true,
-                    "FLOATING": false,
-                    "SYMMETRICAL": true,
-                    "ASYMMETRICAL": false,
-                    "POWER_OF_2": true,
-                    "DYNAMIC": false
-                },
-                "state": "PASSIVE",
-                "quant_min": -128,
-                "quant_max": 127,
-                "hash": 3838059119,
-                "dominator": 3838059119
+                "hash": 2474246527,
+                "dominator": 2744256240
             },
             "PPQ_Variable_26": {
                 "bit_width": 8,
@@ -2292,10 +2274,28 @@
                 "state": "PASSIVE",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 3528242038,
-                "dominator": 3528242038
+                "hash": 2996524614,
+                "dominator": 2996524614
             },
-            "hardtanh_11": {
+            "PPQ_Variable_11": {
+                "bit_width": 8,
+                "policy": {
+                    "PER_TENSOR": true,
+                    "PER_CHANNEL": false,
+                    "LINEAR": true,
+                    "FLOATING": false,
+                    "SYMMETRICAL": true,
+                    "ASYMMETRICAL": false,
+                    "POWER_OF_2": true,
+                    "DYNAMIC": false
+                },
+                "state": "PASSIVE",
+                "quant_min": -128,
+                "quant_max": 127,
+                "hash": 772879345,
+                "dominator": 772879345
+            },
+            "/features/features.6/block/block.1/block.1.2/Clip_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -2310,12 +2310,12 @@
                 "state": "ACTIVATED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 55434337,
-                "dominator": 55434337
+                "hash": 2744256240,
+                "dominator": 2744256240
             }
         },
-        "node_Conv_383": {
-            "hardtanh_11": {
+        "/features/features.6/block/block.2/block.2.0/Conv": {
+            "/features/features.6/block/block.1/block.1.2/Clip_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -2330,10 +2330,10 @@
                 "state": "OVERLAPPED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 971623840,
-                "dominator": 55434337
+                "hash": 4095232499,
+                "dominator": 2744256240
             },
-            "features.6.block.2.0.weight": {
+            "onnx::Conv_283": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -2348,10 +2348,10 @@
                 "state": "ACTIVATED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 3588732387,
-                "dominator": 3588732387
+                "hash": 1968917738,
+                "dominator": 1968917738
             },
-            "features.6.block.2.0.weight_bias": {
+            "onnx::Conv_284": {
                 "bit_width": 20,
                 "policy": {
                     "PER_TENSOR": true,
@@ -2366,10 +2366,10 @@
                 "state": "PASSIVE",
                 "quant_min": -524288,
                 "quant_max": 524287,
-                "hash": 745064730,
-                "dominator": 745064730
+                "hash": 3342917637,
+                "dominator": 3342917637
             },
-            "getitem_51": {
+            "/features/features.6/block/block.2/block.2.0/Conv_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -2384,12 +2384,12 @@
                 "state": "ACTIVATED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 2879728501,
-                "dominator": 2879728501
+                "hash": 2247381684,
+                "dominator": 2247381684
             }
         },
-        "node_Conv_385": {
-            "getitem_51": {
+        "/features/features.7/block/block.0/block.0.0/Conv": {
+            "/features/features.6/block/block.2/block.2.0/Conv_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -2404,10 +2404,10 @@
                 "state": "OVERLAPPED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 1596010596,
-                "dominator": 2879728501
+                "hash": 1281193639,
+                "dominator": 2247381684
             },
-            "features.7.block.0.0.weight": {
+            "onnx::Conv_286": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -2422,10 +2422,10 @@
                 "state": "ACTIVATED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 1154063767,
-                "dominator": 1154063767
+                "hash": 1384617678,
+                "dominator": 1384617678
             },
-            "features.7.block.0.0.weight_bias": {
+            "onnx::Conv_287": {
                 "bit_width": 20,
                 "policy": {
                     "PER_TENSOR": true,
@@ -2440,10 +2440,10 @@
                 "state": "PASSIVE",
                 "quant_min": -524288,
                 "quant_max": 524287,
-                "hash": 2557141502,
-                "dominator": 2557141502
+                "hash": 3506999897,
+                "dominator": 3506999897
             },
-            "getitem_54": {
+            "/features/features.7/block/block.0/block.0.0/Conv_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -2458,12 +2458,12 @@
                 "state": "OVERLAPPED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 1088909513,
-                "dominator": 3275071581
+                "hash": 2331478968,
+                "dominator": 1640617468
             }
         },
-        "n4_13": {
-            "getitem_54": {
+        "/features/features.7/block/block.0/block.0.2/Clip": {
+            "/features/features.7/block/block.0/block.0.0/Conv_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -2478,26 +2478,8 @@
                 "state": "OVERLAPPED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 163623016,
-                "dominator": 3275071581
-            },
-            "PPQ_Variable_12": {
-                "bit_width": 8,
-                "policy": {
-                    "PER_TENSOR": true,
-                    "PER_CHANNEL": false,
-                    "LINEAR": true,
-                    "FLOATING": false,
-                    "SYMMETRICAL": true,
-                    "ASYMMETRICAL": false,
-                    "POWER_OF_2": true,
-                    "DYNAMIC": false
-                },
-                "state": "PASSIVE",
-                "quant_min": -128,
-                "quant_max": 127,
-                "hash": 586689931,
-                "dominator": 586689931
+                "hash": 3280264091,
+                "dominator": 1640617468
             },
             "PPQ_Variable_27": {
                 "bit_width": 8,
@@ -2514,10 +2496,28 @@
                 "state": "PASSIVE",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 200802850,
-                "dominator": 200802850
+                "hash": 2461939698,
+                "dominator": 2461939698
             },
-            "hardtanh_12": {
+            "PPQ_Variable_12": {
+                "bit_width": 8,
+                "policy": {
+                    "PER_TENSOR": true,
+                    "PER_CHANNEL": false,
+                    "LINEAR": true,
+                    "FLOATING": false,
+                    "SYMMETRICAL": true,
+                    "ASYMMETRICAL": false,
+                    "POWER_OF_2": true,
+                    "DYNAMIC": false
+                },
+                "state": "PASSIVE",
+                "quant_min": -128,
+                "quant_max": 127,
+                "hash": 1990082285,
+                "dominator": 1990082285
+            },
+            "/features/features.7/block/block.0/block.0.2/Clip_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -2532,12 +2532,12 @@
                 "state": "ACTIVATED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 3275071581,
-                "dominator": 3275071581
+                "hash": 1640617468,
+                "dominator": 1640617468
             }
         },
-        "node_Conv_387": {
-            "hardtanh_12": {
+        "/features/features.7/block/block.1/block.1.0/Conv": {
+            "/features/features.7/block/block.0/block.0.2/Clip_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -2552,10 +2552,10 @@
                 "state": "OVERLAPPED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 3593826732,
-                "dominator": 3275071581
+                "hash": 4187229391,
+                "dominator": 1640617468
             },
-            "features.7.block.1.0.weight": {
+            "onnx::Conv_289": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -2570,10 +2570,10 @@
                 "state": "ACTIVATED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 79428031,
-                "dominator": 79428031
+                "hash": 2369680470,
+                "dominator": 2369680470
             },
-            "features.7.block.1.0.weight_bias": {
+            "onnx::Conv_290": {
                 "bit_width": 20,
                 "policy": {
                     "PER_TENSOR": true,
@@ -2588,10 +2588,10 @@
                 "state": "PASSIVE",
                 "quant_min": -524288,
                 "quant_max": 524287,
-                "hash": 3448139142,
-                "dominator": 3448139142
+                "hash": 1280580033,
+                "dominator": 1280580033
             },
-            "getitem_57": {
+            "/features/features.7/block/block.1/block.1.0/Conv_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -2606,12 +2606,12 @@
                 "state": "OVERLAPPED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 2503798321,
-                "dominator": 3691695685
+                "hash": 3208942976,
+                "dominator": 1735421508
             }
         },
-        "n4_14": {
-            "getitem_57": {
+        "/features/features.7/block/block.1/block.1.2/Clip": {
+            "/features/features.7/block/block.1/block.1.0/Conv_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -2626,26 +2626,8 @@
                 "state": "OVERLAPPED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 977786928,
-                "dominator": 3691695685
-            },
-            "PPQ_Variable_13": {
-                "bit_width": 8,
-                "policy": {
-                    "PER_TENSOR": true,
-                    "PER_CHANNEL": false,
-                    "LINEAR": true,
-                    "FLOATING": false,
-                    "SYMMETRICAL": true,
-                    "ASYMMETRICAL": false,
-                    "POWER_OF_2": true,
-                    "DYNAMIC": false
-                },
-                "state": "PASSIVE",
-                "quant_min": -128,
-                "quant_max": 127,
-                "hash": 4014724659,
-                "dominator": 4014724659
+                "hash": 3129925187,
+                "dominator": 1735421508
             },
             "PPQ_Variable_28": {
                 "bit_width": 8,
@@ -2662,10 +2644,28 @@
                 "state": "PASSIVE",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 3653347370,
-                "dominator": 3653347370
+                "hash": 1582092282,
+                "dominator": 1582092282
             },
-            "hardtanh_13": {
+            "PPQ_Variable_13": {
+                "bit_width": 8,
+                "policy": {
+                    "PER_TENSOR": true,
+                    "PER_CHANNEL": false,
+                    "LINEAR": true,
+                    "FLOATING": false,
+                    "SYMMETRICAL": true,
+                    "ASYMMETRICAL": false,
+                    "POWER_OF_2": true,
+                    "DYNAMIC": false
+                },
+                "state": "PASSIVE",
+                "quant_min": -128,
+                "quant_max": 127,
+                "hash": 3161233109,
+                "dominator": 3161233109
+            },
+            "/features/features.7/block/block.1/block.1.2/Clip_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -2680,12 +2680,12 @@
                 "state": "ACTIVATED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 3691695685,
-                "dominator": 3691695685
+                "hash": 1735421508,
+                "dominator": 1735421508
             }
         },
-        "node_Conv_389": {
-            "hardtanh_13": {
+        "/features/features.7/block/block.2/block.2.0/Conv": {
+            "/features/features.7/block/block.1/block.1.2/Clip_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -2700,10 +2700,10 @@
                 "state": "OVERLAPPED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 3047131124,
-                "dominator": 3691695685
+                "hash": 4058735607,
+                "dominator": 1735421508
             },
-            "features.7.block.2.0.weight": {
+            "onnx::Conv_292": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -2718,10 +2718,10 @@
                 "state": "ACTIVATED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 3611350759,
-                "dominator": 3611350759
+                "hash": 3705081566,
+                "dominator": 3705081566
             },
-            "features.7.block.2.0.weight_bias": {
+            "onnx::Conv_293": {
                 "bit_width": 20,
                 "policy": {
                     "PER_TENSOR": true,
@@ -2736,10 +2736,10 @@
                 "state": "PASSIVE",
                 "quant_min": -524288,
                 "quant_max": 524287,
-                "hash": 942568974,
-                "dominator": 942568974
+                "hash": 3056495145,
+                "dominator": 3056495145
             },
-            "getitem_60": {
+            "/features/features.7/block/block.2/block.2.0/Conv_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -2754,12 +2754,12 @@
                 "state": "PASSIVE",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 287372441,
-                "dominator": 287372441
+                "hash": 1883849800,
+                "dominator": 1883849800
             }
         },
-        "node_add_3": {
-            "getitem_60": {
+        "/features/features.7/Add": {
+            "/features/features.7/block/block.2/block.2.0/Conv_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -2774,10 +2774,10 @@
                 "state": "PASSIVE",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 1804035320,
-                "dominator": 1804035320
+                "hash": 4064670187,
+                "dominator": 4064670187
             },
-            "PPQ_Variable_31": {
+            "PPQ_Variable_30": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -2792,10 +2792,10 @@
                 "state": "PASSIVE",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 3813298139,
-                "dominator": 3813298139
+                "hash": 2472031490,
+                "dominator": 2472031490
             },
-            "add_3": {
+            "/features/features.7/Add_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -2810,12 +2810,12 @@
                 "state": "ACTIVATED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 51305266,
-                "dominator": 51305266
+                "hash": 1396213693,
+                "dominator": 1396213693
             }
         },
-        "node_Conv_391": {
-            "add_3": {
+        "/features/features.8/features.8.0/Conv": {
+            "/features/features.7/Add_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -2830,10 +2830,10 @@
                 "state": "OVERLAPPED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 2060014893,
-                "dominator": 51305266
+                "hash": 2713861004,
+                "dominator": 1396213693
             },
-            "features.8.0.weight": {
+            "onnx::Conv_295": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -2848,10 +2848,10 @@
                 "state": "ACTIVATED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 166826812,
-                "dominator": 166826812
+                "hash": 1700076575,
+                "dominator": 1700076575
             },
-            "features.8.0.weight_bias": {
+            "onnx::Conv_296": {
                 "bit_width": 20,
                 "policy": {
                     "PER_TENSOR": true,
@@ -2866,10 +2866,10 @@
                 "state": "PASSIVE",
                 "quant_min": -524288,
                 "quant_max": 524287,
-                "hash": 3340883215,
-                "dominator": 3340883215
+                "hash": 3220997734,
+                "dominator": 3220997734
             },
-            "getitem_63": {
+            "/features/features.8/features.8.0/Conv_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -2884,12 +2884,12 @@
                 "state": "OVERLAPPED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 646323094,
-                "dominator": 452770618
+                "hash": 1729504145,
+                "dominator": 756199845
             }
         },
-        "n4_15": {
-            "getitem_63": {
+        "/features/features.8/features.8.2/Clip": {
+            "/features/features.8/features.8.0/Conv_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -2904,26 +2904,8 @@
                 "state": "OVERLAPPED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 2125079553,
-                "dominator": 452770618
-            },
-            "PPQ_Variable_14": {
-                "bit_width": 8,
-                "policy": {
-                    "PER_TENSOR": true,
-                    "PER_CHANNEL": false,
-                    "LINEAR": true,
-                    "FLOATING": false,
-                    "SYMMETRICAL": true,
-                    "ASYMMETRICAL": false,
-                    "POWER_OF_2": true,
-                    "DYNAMIC": false
-                },
-                "state": "PASSIVE",
-                "quant_min": -128,
-                "quant_max": 127,
-                "hash": 565933760,
-                "dominator": 565933760
+                "hash": 386512912,
+                "dominator": 756199845
             },
             "PPQ_Variable_29": {
                 "bit_width": 8,
@@ -2940,10 +2922,28 @@
                 "state": "PASSIVE",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 3401529987,
-                "dominator": 3401529987
+                "hash": 2015213203,
+                "dominator": 2015213203
             },
-            "hardtanh_14": {
+            "PPQ_Variable_14": {
+                "bit_width": 8,
+                "policy": {
+                    "PER_TENSOR": true,
+                    "PER_CHANNEL": false,
+                    "LINEAR": true,
+                    "FLOATING": false,
+                    "SYMMETRICAL": true,
+                    "ASYMMETRICAL": false,
+                    "POWER_OF_2": true,
+                    "DYNAMIC": false
+                },
+                "state": "PASSIVE",
+                "quant_min": -128,
+                "quant_max": 127,
+                "hash": 2684716810,
+                "dominator": 2684716810
+            },
+            "/features/features.8/features.8.2/Clip_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -2958,12 +2958,12 @@
                 "state": "ACTIVATED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 452770618,
-                "dominator": 452770618
+                "hash": 756199845,
+                "dominator": 756199845
             }
         },
-        "node_mean": {
-            "hardtanh_14": {
+        "/ReduceMean": {
+            "/features/features.8/features.8.2/Clip_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -2978,10 +2978,10 @@
                 "state": "OVERLAPPED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 43635989,
-                "dominator": 452770618
+                "hash": 2232245716,
+                "dominator": 756199845
             },
-            "val_247": {
+            "/Constant_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -2996,10 +2996,10 @@
                 "state": "FP32",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 1412543364,
-                "dominator": 1412543364
+                "hash": 392615239,
+                "dominator": 392615239
             },
-            "mean": {
+            "/ReduceMean_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -3014,12 +3014,12 @@
                 "state": "ACTIVATED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 1372361783,
-                "dominator": 1372361783
+                "hash": 2322463470,
+                "dominator": 2322463470
             }
         },
-        "node_view": {
-            "PPQ_Variable_30": {
+        "/classifier/Gemm": {
+            "/ReduceMean_output_0": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -3034,66 +3034,10 @@
                 "state": "OVERLAPPED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 516193822,
-                "dominator": 1372361783
+                "hash": 2286806521,
+                "dominator": 2322463470
             },
-            "val_251": {
-                "bit_width": 8,
-                "policy": {
-                    "PER_TENSOR": true,
-                    "PER_CHANNEL": false,
-                    "LINEAR": true,
-                    "FLOATING": false,
-                    "SYMMETRICAL": true,
-                    "ASYMMETRICAL": false,
-                    "POWER_OF_2": true,
-                    "DYNAMIC": false
-                },
-                "state": "FP32",
-                "quant_min": -128,
-                "quant_max": 127,
-                "hash": 1337138281,
-                "dominator": 1337138281
-            },
-            "view": {
-                "bit_width": 8,
-                "policy": {
-                    "PER_TENSOR": true,
-                    "PER_CHANNEL": false,
-                    "LINEAR": true,
-                    "FLOATING": false,
-                    "SYMMETRICAL": true,
-                    "ASYMMETRICAL": false,
-                    "POWER_OF_2": true,
-                    "DYNAMIC": false
-                },
-                "state": "OVERLAPPED",
-                "quant_min": -128,
-                "quant_max": 127,
-                "hash": 4191432072,
-                "dominator": 1372361783
-            }
-        },
-        "node_linear": {
-            "view": {
-                "bit_width": 8,
-                "policy": {
-                    "PER_TENSOR": true,
-                    "PER_CHANNEL": false,
-                    "LINEAR": true,
-                    "FLOATING": false,
-                    "SYMMETRICAL": true,
-                    "ASYMMETRICAL": false,
-                    "POWER_OF_2": true,
-                    "DYNAMIC": false
-                },
-                "state": "OVERLAPPED",
-                "quant_min": -128,
-                "quant_max": 127,
-                "hash": 4149884459,
-                "dominator": 1372361783
-            },
-            "classifier.2.weight": {
+            "classifier.weight": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -3108,10 +3052,10 @@
                 "state": "ACTIVATED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 3002886210,
-                "dominator": 3002886210
+                "hash": 3393065176,
+                "dominator": 3393065176
             },
-            "classifier.2.bias": {
+            "classifier.bias": {
                 "bit_width": 20,
                 "policy": {
                     "PER_TENSOR": true,
@@ -3126,10 +3070,10 @@
                 "state": "PASSIVE",
                 "quant_min": -524288,
                 "quant_max": 524287,
-                "hash": 732491261,
-                "dominator": 732491261
+                "hash": 1349372987,
+                "dominator": 1349372987
             },
-            "logits": {
+            "230": {
                 "bit_width": 8,
                 "policy": {
                     "PER_TENSOR": true,
@@ -3144,546 +3088,506 @@
                 "state": "ACTIVATED",
                 "quant_min": -128,
                 "quant_max": 127,
-                "hash": 643434700,
-                "dominator": 643434700
-            }
-        },
-        "PPQ_Operation_0": {
-            "mean": {
-                "bit_width": 8,
-                "policy": {
-                    "PER_TENSOR": true,
-                    "PER_CHANNEL": false,
-                    "LINEAR": true,
-                    "FLOATING": false,
-                    "SYMMETRICAL": true,
-                    "ASYMMETRICAL": false,
-                    "POWER_OF_2": true,
-                    "DYNAMIC": false
-                },
-                "state": "OVERLAPPED",
-                "quant_min": -128,
-                "quant_max": 127,
-                "hash": 516193822,
-                "dominator": 1372361783
-            },
-            "PPQ_Variable_30": {
-                "bit_width": 8,
-                "policy": {
-                    "PER_TENSOR": true,
-                    "PER_CHANNEL": false,
-                    "LINEAR": true,
-                    "FLOATING": false,
-                    "SYMMETRICAL": true,
-                    "ASYMMETRICAL": false,
-                    "POWER_OF_2": true,
-                    "DYNAMIC": false
-                },
-                "state": "OVERLAPPED",
-                "quant_min": -128,
-                "quant_max": 127,
-                "hash": 516193822,
-                "dominator": 1372361783
+                "hash": 2647516690,
+                "dominator": 2647516690
             }
         }
     },
     "dispatchings": {
-        "node_Conv_349": "ESPDL_S3_INT8",
-        "n4": "ESPDL_S3_INT8",
-        "node_Conv_351": "ESPDL_S3_INT8",
-        "n4_2": "ESPDL_S3_INT8",
-        "node_Conv_353": "ESPDL_S3_INT8",
-        "node_add": "ESPDL_S3_INT8",
-        "node_Conv_355": "ESPDL_S3_INT8",
-        "n4_3": "ESPDL_S3_INT8",
-        "node_Conv_357": "ESPDL_S3_INT8",
-        "n4_4": "ESPDL_S3_INT8",
-        "node_Conv_359": "ESPDL_S3_INT8",
-        "node_Conv_361": "ESPDL_S3_INT8",
-        "n4_5": "ESPDL_S3_INT8",
-        "node_Conv_363": "ESPDL_S3_INT8",
-        "n4_6": "ESPDL_S3_INT8",
-        "node_Conv_365": "ESPDL_S3_INT8",
-        "node_add_1": "ESPDL_S3_INT8",
-        "node_Conv_367": "ESPDL_S3_INT8",
-        "n4_7": "ESPDL_S3_INT8",
-        "node_Conv_369": "ESPDL_S3_INT8",
-        "n4_8": "ESPDL_S3_INT8",
-        "node_Conv_371": "ESPDL_S3_INT8",
-        "node_Conv_373": "ESPDL_S3_INT8",
-        "n4_9": "ESPDL_S3_INT8",
-        "node_Conv_375": "ESPDL_S3_INT8",
-        "n4_10": "ESPDL_S3_INT8",
-        "node_Conv_377": "ESPDL_S3_INT8",
-        "node_add_2": "ESPDL_S3_INT8",
-        "node_Conv_379": "ESPDL_S3_INT8",
-        "n4_11": "ESPDL_S3_INT8",
-        "node_Conv_381": "ESPDL_S3_INT8",
-        "n4_12": "ESPDL_S3_INT8",
-        "node_Conv_383": "ESPDL_S3_INT8",
-        "node_Conv_385": "ESPDL_S3_INT8",
-        "n4_13": "ESPDL_S3_INT8",
-        "node_Conv_387": "ESPDL_S3_INT8",
-        "n4_14": "ESPDL_S3_INT8",
-        "node_Conv_389": "ESPDL_S3_INT8",
-        "node_add_3": "ESPDL_S3_INT8",
-        "node_Conv_391": "ESPDL_S3_INT8",
-        "n4_15": "ESPDL_S3_INT8",
-        "node_mean": "ESPDL_S3_INT8",
-        "node_view": "ESPDL_S3_INT8",
-        "node_linear": "ESPDL_S3_INT8",
-        "PPQ_Operation_0": "ESPDL_S3_INT8"
+        "/features/features.0/features.0.0/Conv": "ESPDL_S3_INT8",
+        "/features/features.0/features.0.2/Clip": "ESPDL_S3_INT8",
+        "/features/features.1/block/block.0/block.0.0/Conv": "ESPDL_S3_INT8",
+        "/features/features.1/block/block.0/block.0.2/Clip": "ESPDL_S3_INT8",
+        "/features/features.1/block/block.1/block.1.0/Conv": "ESPDL_S3_INT8",
+        "/features/features.1/Add": "ESPDL_S3_INT8",
+        "/features/features.2/block/block.0/block.0.0/Conv": "ESPDL_S3_INT8",
+        "/features/features.2/block/block.0/block.0.2/Clip": "ESPDL_S3_INT8",
+        "/features/features.2/block/block.1/block.1.0/Conv": "ESPDL_S3_INT8",
+        "/features/features.2/block/block.1/block.1.2/Clip": "ESPDL_S3_INT8",
+        "/features/features.2/block/block.2/block.2.0/Conv": "ESPDL_S3_INT8",
+        "/features/features.3/block/block.0/block.0.0/Conv": "ESPDL_S3_INT8",
+        "/features/features.3/block/block.0/block.0.2/Clip": "ESPDL_S3_INT8",
+        "/features/features.3/block/block.1/block.1.0/Conv": "ESPDL_S3_INT8",
+        "/features/features.3/block/block.1/block.1.2/Clip": "ESPDL_S3_INT8",
+        "/features/features.3/block/block.2/block.2.0/Conv": "ESPDL_S3_INT8",
+        "/features/features.3/Add": "ESPDL_S3_INT8",
+        "/features/features.4/block/block.0/block.0.0/Conv": "ESPDL_S3_INT8",
+        "/features/features.4/block/block.0/block.0.2/Clip": "ESPDL_S3_INT8",
+        "/features/features.4/block/block.1/block.1.0/Conv": "ESPDL_S3_INT8",
+        "/features/features.4/block/block.1/block.1.2/Clip": "ESPDL_S3_INT8",
+        "/features/features.4/block/block.2/block.2.0/Conv": "ESPDL_S3_INT8",
+        "/features/features.5/block/block.0/block.0.0/Conv": "ESPDL_S3_INT8",
+        "/features/features.5/block/block.0/block.0.2/Clip": "ESPDL_S3_INT8",
+        "/features/features.5/block/block.1/block.1.0/Conv": "ESPDL_S3_INT8",
+        "/features/features.5/block/block.1/block.1.2/Clip": "ESPDL_S3_INT8",
+        "/features/features.5/block/block.2/block.2.0/Conv": "ESPDL_S3_INT8",
+        "/features/features.5/Add": "ESPDL_S3_INT8",
+        "/features/features.6/block/block.0/block.0.0/Conv": "ESPDL_S3_INT8",
+        "/features/features.6/block/block.0/block.0.2/Clip": "ESPDL_S3_INT8",
+        "/features/features.6/block/block.1/block.1.0/Conv": "ESPDL_S3_INT8",
+        "/features/features.6/block/block.1/block.1.2/Clip": "ESPDL_S3_INT8",
+        "/features/features.6/block/block.2/block.2.0/Conv": "ESPDL_S3_INT8",
+        "/features/features.7/block/block.0/block.0.0/Conv": "ESPDL_S3_INT8",
+        "/features/features.7/block/block.0/block.0.2/Clip": "ESPDL_S3_INT8",
+        "/features/features.7/block/block.1/block.1.0/Conv": "ESPDL_S3_INT8",
+        "/features/features.7/block/block.1/block.1.2/Clip": "ESPDL_S3_INT8",
+        "/features/features.7/block/block.2/block.2.0/Conv": "ESPDL_S3_INT8",
+        "/features/features.7/Add": "ESPDL_S3_INT8",
+        "/features/features.8/features.8.0/Conv": "ESPDL_S3_INT8",
+        "/features/features.8/features.8.2/Clip": "ESPDL_S3_INT8",
+        "/ReduceMean": "ESPDL_S3_INT8",
+        "/classifier/Gemm": "ESPDL_S3_INT8"
     },
     "values": {
-        "4042401013": {
+        "2159625780": {
             "scale": 0.015625,
             "zero_point": 0.0
         },
-        "3992994788": {
+        "2268896295": {
             "scale": 0.03125,
             "zero_point": 0.0
         },
-        "333079319": {
+        "1482696270": {
             "scale": 0.00048828125,
             "zero_point": 0.0
         },
-        "3773684712": {
+        "4200053019": {
             "scale": 0.0625,
             "zero_point": 0.0
         },
-        "528395019": {
+        "2308677490": {
             "scale": 0.0625,
             "zero_point": 0.0
         },
-        "1211795874": {
+        "2550401133": {
             "scale": 0.0625,
             "zero_point": 0.0
         },
-        "3717739820": {
+        "1510220367": {
             "scale": 0.03125,
             "zero_point": 0.0
         },
-        "1963044671": {
+        "1914975190": {
             "scale": 0.001953125,
             "zero_point": 0.0
         },
-        "2854204336": {
+        "792570819": {
             "scale": 0.03125,
             "zero_point": 0.0
         },
-        "2291286963": {
+        "3612764026": {
             "scale": 0.03125,
             "zero_point": 0.0
         },
-        "193224618": {
+        "2752368725": {
             "scale": 0.03125,
             "zero_point": 0.0
         },
-        "2986605428": {
+        "2951899511": {
             "scale": 0.015625,
             "zero_point": 0.0
         },
-        "3946937447": {
+        "2427977310": {
             "scale": 0.00048828125,
             "zero_point": 0.0
         },
-        "413304206": {
+        "682204073": {
             "scale": 0.0625,
             "zero_point": 0.0
         },
-        "1919075865": {
+        "1719513032": {
             "scale": 0.0625,
             "zero_point": 0.0
         },
-        "937947256": {
+        "1052159851": {
             "scale": 0.0625,
             "zero_point": 0.0
         },
-        "3317083483": {
+        "3638295682": {
             "scale": 0.0625,
             "zero_point": 0.0
         },
-        "9739949": {
+        "2121285388": {
             "scale": 0.0078125,
             "zero_point": 0.0
         },
-        "1419097788": {
+        "314118559": {
             "scale": 0.00048828125,
             "zero_point": 0.0
         },
-        "292840833": {
+        "1202770832": {
             "scale": 0.0625,
             "zero_point": 0.0
         },
-        "3879907904": {
+        "2616615955": {
             "scale": 0.0625,
             "zero_point": 0.0
         },
-        "410486787": {
+        "3406921354": {
             "scale": 0.0625,
             "zero_point": 0.0
         },
-        "1737526933": {
+        "117772628": {
             "scale": 0.03125,
             "zero_point": 0.0
         },
-        "3675490052": {
+        "2007874247": {
             "scale": 0.001953125,
             "zero_point": 0.0
         },
-        "2721828329": {
+        "2654329944": {
             "scale": 0.03125,
             "zero_point": 0.0
         },
-        "1709185288": {
+        "152332731": {
             "scale": 0.03125,
             "zero_point": 0.0
         },
-        "2688840619": {
+        "2385513874": {
             "scale": 0.03125,
             "zero_point": 0.0
         },
-        "1323374461": {
+        "1628657820": {
             "scale": 0.0078125,
             "zero_point": 0.0
         },
-        "607620172": {
+        "172623087": {
             "scale": 0.000244140625,
             "zero_point": 0.0
         },
-        "4188547551": {
+        "2573536246": {
             "scale": 0.0625,
             "zero_point": 0.0
         },
-        "2761400145": {
+        "3149457952": {
             "scale": 0.0078125,
             "zero_point": 0.0
         },
-        "916735184": {
+        "2844549219": {
             "scale": 0.00048828125,
             "zero_point": 0.0
         },
-        "502716773": {
+        "236008676": {
             "scale": 0.0625,
             "zero_point": 0.0
         },
-        "3291473556": {
+        "111906839": {
             "scale": 0.0625,
             "zero_point": 0.0
         },
-        "546454279": {
+        "783223422": {
             "scale": 0.0625,
             "zero_point": 0.0
         },
-        "1697282489": {
+        "1620712680": {
             "scale": 0.015625,
             "zero_point": 0.0
         },
-        "2250724760": {
+        "616425483": {
             "scale": 0.0009765625,
             "zero_point": 0.0
         },
-        "1179022413": {
+        "3597190700": {
             "scale": 0.0625,
             "zero_point": 0.0
         },
-        "1092531676": {
+        "2752773183": {
             "scale": 0.0625,
             "zero_point": 0.0
         },
-        "2259479855": {
+        "1470653958": {
             "scale": 0.0625,
             "zero_point": 0.0
         },
-        "2614820129": {
+        "7181488": {
             "scale": 0.0078125,
             "zero_point": 0.0
         },
-        "1328900960": {
+        "3630997683": {
             "scale": 0.00048828125,
             "zero_point": 0.0
         },
-        "2234244259": {
+        "866732202": {
             "scale": 0.0625,
             "zero_point": 0.0
         },
-        "2905035994": {
+        "913697989": {
             "scale": 0.0625,
             "zero_point": 0.0
         },
-        "1774749749": {
+        "1979198580": {
             "scale": 0.0625,
             "zero_point": 0.0
         },
-        "2677676580": {
+        "258533735": {
             "scale": 0.0625,
             "zero_point": 0.0
         },
-        "3567327678": {
+        "135109401": {
             "scale": 0.0078125,
             "zero_point": 0.0
         },
-        "2589182345": {
+        "1450930552": {
             "scale": 0.00048828125,
             "zero_point": 0.0
         },
-        "1389077986": {
+        "3912369069": {
             "scale": 0.0625,
             "zero_point": 0.0
         },
-        "293188893": {
+        "2559674300": {
             "scale": 0.0625,
             "zero_point": 0.0
         },
-        "1059861356": {
+        "1974728591": {
             "scale": 0.0625,
             "zero_point": 0.0
         },
-        "904478022": {
+        "1976654465": {
             "scale": 0.015625,
             "zero_point": 0.0
         },
-        "176389873": {
+        "1245696832": {
             "scale": 0.0009765625,
             "zero_point": 0.0
         },
-        "1915839466": {
+        "1082790805": {
             "scale": 0.0625,
             "zero_point": 0.0
         },
-        "4091190021": {
+        "645593092": {
             "scale": 0.0625,
             "zero_point": 0.0
         },
-        "114500020": {
+        "513984183": {
             "scale": 0.0625,
             "zero_point": 0.0
         },
-        "578084302": {
+        "3183403753": {
             "scale": 0.0078125,
             "zero_point": 0.0
         },
-        "1025293657": {
+        "602593800": {
             "scale": 0.00048828125,
             "zero_point": 0.0
         },
-        "589761208": {
+        "2221420715": {
             "scale": 0.0625,
             "zero_point": 0.0
         },
-        "1006743282": {
+        "3840588925": {
             "scale": 0.0078125,
             "zero_point": 0.0
         },
-        "3413105133": {
+        "3773734220": {
             "scale": 0.00048828125,
             "zero_point": 0.0
         },
-        "3116833622": {
+        "2083837009": {
             "scale": 0.0625,
             "zero_point": 0.0
         },
-        "135668929": {
+        "283157968": {
             "scale": 0.0625,
             "zero_point": 0.0
         },
-        "938112128": {
+        "1795157331": {
             "scale": 0.0625,
             "zero_point": 0.0
         },
-        "2193204986": {
+        "1111793253": {
             "scale": 0.015625,
             "zero_point": 0.0
         },
-        "3175223765": {
+        "1318754196": {
             "scale": 0.0009765625,
             "zero_point": 0.0
         },
-        "2406946270": {
+        "1784008377": {
             "scale": 0.0625,
             "zero_point": 0.0
         },
-        "891966761": {
+        "4164507288": {
             "scale": 0.0625,
             "zero_point": 0.0
         },
-        "2663482184": {
+        "1447230203": {
             "scale": 0.0625,
             "zero_point": 0.0
         },
-        "321547266": {
+        "512514381": {
             "scale": 0.0078125,
             "zero_point": 0.0
         },
-        "1331552957": {
+        "4162914012": {
             "scale": 0.00048828125,
             "zero_point": 0.0
         },
-        "2860395148": {
+        "4062837295": {
             "scale": 0.0625,
             "zero_point": 0.0
         },
-        "60641055": {
+        "1051339830": {
             "scale": 0.0625,
             "zero_point": 0.0
         },
-        "2880433510": {
+        "4236800545": {
             "scale": 0.0625,
             "zero_point": 0.0
         },
-        "2153246353": {
+        "2671840352": {
             "scale": 0.0625,
             "zero_point": 0.0
         },
-        "3924154771": {
+        "3002596826": {
             "scale": 0.00390625,
             "zero_point": 0.0
         },
-        "3707313674": {
+        "3225062709": {
             "scale": 0.000244140625,
             "zero_point": 0.0
         },
-        "2141841479": {
+        "930517694": {
             "scale": 0.0625,
             "zero_point": 0.0
         },
-        "1538310638": {
+        "2432130697": {
             "scale": 0.0625,
             "zero_point": 0.0
         },
-        "643928313": {
+        "502785832": {
             "scale": 0.0625,
             "zero_point": 0.0
         },
-        "815189819": {
+        "3576098530": {
             "scale": 0.03125,
             "zero_point": 0.0
         },
-        "3944668434": {
+        "2764823069": {
             "scale": 0.001953125,
             "zero_point": 0.0
         },
-        "3838059119": {
+        "2996524614": {
             "scale": 0.0625,
             "zero_point": 0.0
         },
-        "3528242038": {
+        "772879345": {
             "scale": 0.0625,
             "zero_point": 0.0
         },
-        "55434337": {
+        "2744256240": {
             "scale": 0.0625,
             "zero_point": 0.0
         },
-        "3588732387": {
+        "1968917738": {
             "scale": 0.00390625,
             "zero_point": 0.0
         },
-        "745064730": {
+        "3342917637": {
             "scale": 0.000244140625,
             "zero_point": 0.0
         },
-        "2879728501": {
+        "2247381684": {
             "scale": 0.03125,
             "zero_point": 0.0
         },
-        "1154063767": {
+        "1384617678": {
             "scale": 0.0078125,
             "zero_point": 0.0
         },
-        "2557141502": {
+        "3506999897": {
             "scale": 0.000244140625,
             "zero_point": 0.0
         },
-        "586689931": {
+        "2461939698": {
             "scale": 0.0625,
             "zero_point": 0.0
         },
-        "200802850": {
+        "1990082285": {
             "scale": 0.0625,
             "zero_point": 0.0
         },
-        "3275071581": {
+        "1640617468": {
             "scale": 0.0625,
             "zero_point": 0.0
         },
-        "79428031": {
+        "2369680470": {
             "scale": 0.03125,
             "zero_point": 0.0
         },
-        "3448139142": {
+        "1280580033": {
             "scale": 0.001953125,
             "zero_point": 0.0
         },
-        "4014724659": {
+        "1582092282": {
             "scale": 0.0625,
             "zero_point": 0.0
         },
-        "3653347370": {
+        "3161233109": {
             "scale": 0.0625,
             "zero_point": 0.0
         },
-        "3691695685": {
+        "1735421508": {
             "scale": 0.0625,
             "zero_point": 0.0
         },
-        "3611350759": {
+        "3705081566": {
             "scale": 0.00390625,
             "zero_point": 0.0
         },
-        "942568974": {
+        "3056495145": {
             "scale": 0.000244140625,
             "zero_point": 0.0
         },
-        "287372441": {
+        "1883849800": {
             "scale": 0.0625,
             "zero_point": 0.0
         },
-        "1804035320": {
+        "4064670187": {
             "scale": 0.0625,
             "zero_point": 0.0
         },
-        "3813298139": {
+        "2472031490": {
             "scale": 0.0625,
             "zero_point": 0.0
         },
-        "51305266": {
+        "1396213693": {
             "scale": 0.0625,
             "zero_point": 0.0
         },
-        "166826812": {
+        "1700076575": {
             "scale": 0.00390625,
             "zero_point": 0.0
         },
-        "3340883215": {
+        "3220997734": {
             "scale": 0.000244140625,
             "zero_point": 0.0
         },
-        "565933760": {
+        "2015213203": {
             "scale": 0.03125,
             "zero_point": 0.0
         },
-        "3401529987": {
+        "2684716810": {
             "scale": 0.03125,
             "zero_point": 0.0
         },
-        "452770618": {
+        "756199845": {
             "scale": 0.03125,
             "zero_point": 0.0
         },
-        "1372361783": {
+        "2322463470": {
             "scale": 0.03125,
             "zero_point": 0.0
         },
-        "3002886210": {
+        "3393065176": {
             "scale": 0.001953125,
             "zero_point": 0.0
         },
-        "732491261": {
+        "1349372987": {
             "scale": 6.103515625e-05,
             "zero_point": 0.0
         },
-        "643434700": {
+        "2647516690": {
             "scale": 0.0625,
             "zero_point": 0.0
         }
