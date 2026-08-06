@@ -80,6 +80,16 @@ dependencies:
     - esp32c61
     - esp32h4
     version: 1.0.2
+  espressif/mqtt:
+    component_hash: fb18bc3b65aa8c94693a9811ffc322cca8a65d92d5ec84983d3e385080e3969c
+    dependencies:
+    - name: idf
+      require: private
+      version: '>=5.3'
+    source:
+      registry_url: https://components.espressif.com/
+      type: service
+    version: 1.1.0
   idf:
     source:
       type: idf
@@ -87,6 +97,7 @@ dependencies:
 direct_dependencies:
 - espressif/esp-dl
 - espressif/esp32-camera
-manifest_hash: 2bc31747fd40c49f94279ab68c88f2d0f54a1f0f926af7fc9ffba3f5a51dad00
+- espressif/mqtt
+manifest_hash: a723e83dd518377140fce8a30171d608404e4084ac6df49c22089675ce5c396d
 target: esp32s3
 version: 3.0.0

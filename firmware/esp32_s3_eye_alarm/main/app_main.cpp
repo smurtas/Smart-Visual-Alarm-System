@@ -1,44 +1,183 @@
-#include <cstdint>
+#include "camera.hpp"
+#include "http_upload.hpp"
+#include "inference.hpp"
+#include "mqtt.hpp"
+#include "wifi.hpp"
 
-#include "dl_model_base.hpp"
-#include "esp_err.h"
 #include "esp_log.h"
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
 
-static const char *TAG = "MCUNET_TEST";
 
-// Il nome del simbolo deriva dal file incorporato:
-// mcunet_int8.espdl → _binary_mcunet_int8_espdl_start
-extern const uint8_t mcunet_int8_espdl[]
-    asm("_binary_mcunet_int8_espdl_start");
+static const char *TAG = "SMART_ALARM";
+
+static constexpr int INFERENCE_INTERVAL_MS = 2000;
+
 
 extern "C" void app_main(void)
 {
-    ESP_LOGI(TAG, "Starting MCUNet ESP-DL self-test");
-
-    dl::Model *model = new dl::Model(
-        reinterpret_cast<const char *>(mcunet_int8_espdl),
-        fbs::MODEL_LOCATION_IN_FLASH_RODATA
+    ESP_LOGI(
+        TAG,
+        "Starting Smart Visual Alarm"
     );
 
-    if (model == nullptr) {
-        ESP_LOGE(TAG, "Model allocation failed");
+    if (camera_init() != ESP_OK) {
+        ESP_LOGE(
+            TAG,
+            "Camera initialization failed"
+        );
+
         return;
     }
 
-    ESP_LOGI(TAG, "Model loaded successfully");
+    if (inference_init() != ESP_OK) {
+        ESP_LOGE(
+            TAG,
+            "Inference initialization failed"
+        );
 
-    const esp_err_t result = model->test();
-
-    if (result == ESP_OK) {
-        ESP_LOGI(TAG, "MCUNet self-test passed");
-    } else {
-        ESP_LOGE(TAG, "MCUNet self-test failed");
+        return;
     }
 
-    model->profile_memory();
-    model->profile_module(true);
+    if (wifi_init_sta() != ESP_OK) {
+        ESP_LOGE(
+            TAG,
+            "Wi-Fi initialization failed"
+        );
 
-    delete model;
+        return;
+    }
 
-    ESP_LOGI(TAG, "Self-test completed");
+    if (mqtt_init() != ESP_OK) {
+        ESP_LOGE(
+            TAG,
+            "MQTT initialization failed"
+        );
+
+        return;
+    }
+
+    ESP_LOGI(
+        TAG,
+        "Camera warm-up started"
+    );
+
+    for (int index = 0; index < 8; ++index) {
+        camera_fb_t *warmup_frame =
+            camera_capture();
+
+        if (warmup_frame != nullptr) {
+            camera_release(warmup_frame);
+        }
+
+        vTaskDelay(
+            pdMS_TO_TICKS(200)
+        );
+    }
+
+    ESP_LOGI(
+        TAG,
+        "System ready"
+    );
+
+    while (true) {
+        camera_fb_t *frame =
+            camera_capture();
+
+        if (frame == nullptr) {
+            ESP_LOGE(
+                TAG,
+                "Frame acquisition failed"
+            );
+
+            vTaskDelay(
+                pdMS_TO_TICKS(
+                    INFERENCE_INTERVAL_MS
+                )
+            );
+
+            continue;
+        }
+
+        Prediction prediction = {};
+
+        const esp_err_t inference_result =
+            inference_run(
+                frame,
+                &prediction
+            );
+
+        if (inference_result == ESP_OK) {
+            ESP_LOGI(
+                TAG,
+                "Prediction: %s | confidence: %.2f%%",
+                prediction.class_name,
+                prediction.confidence * 100.0f
+            );
+
+            ESP_LOGI(
+                TAG,
+                "Logits: animal=%.4f "
+                "empty=%.4f "
+                "person=%.4f",
+                prediction.logits[0],
+                prediction.logits[1],
+                prediction.logits[2]
+            );
+
+            const bool is_alert =
+                prediction.class_index == 0
+                || prediction.class_index == 2;
+
+            if (is_alert) {
+                const esp_err_t upload_result =
+                    http_upload_frame(frame);
+
+                if (upload_result != ESP_OK) {
+                    ESP_LOGE(
+                        TAG,
+                        "Alert image upload failed: %s",
+                        esp_err_to_name(upload_result)
+                    );
+                }
+            }
+
+            if (mqtt_is_connected()) {
+                const esp_err_t mqtt_result =
+                    mqtt_publish_prediction(
+                        prediction.class_name,
+                        prediction.confidence
+                    );
+
+                if (mqtt_result != ESP_OK) {
+                    ESP_LOGE(
+                        TAG,
+                        "MQTT publish failed: %s",
+                        esp_err_to_name(mqtt_result)
+                    );
+                }
+            } else {
+                ESP_LOGW(
+                    TAG,
+                    "MQTT not connected yet"
+                );
+            }
+        } else {
+            ESP_LOGE(
+                TAG,
+                "Inference failed: %s",
+                esp_err_to_name(
+                    inference_result
+                )
+            );
+        }
+
+        camera_release(frame);
+
+        vTaskDelay(
+            pdMS_TO_TICKS(
+                INFERENCE_INTERVAL_MS
+            )
+        );
+    }
 }

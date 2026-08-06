@@ -186,48 +186,41 @@ Each detection sends:
 
 ---
 
-# Current Status
+## Current project status
 
-## Dataset
+### Verified
 
-- ✅ Image acquisition
-- ✅ Manual labeling
-- ✅ Dataset balancing
-- ✅ Data augmentation
+- Camera initialization on ESP32-S3-EYE
+- JPEG image acquisition
+- Image preprocessing
+- MCUNet INT8 model loading
+- On-device inference
+- Continuous classification loop
+- Class mapping:
+  - `0 = animal`
+  - `1 = empty`
+  - `2 = person`
 
-## Machine Learning
+### Implemented but not yet verified
 
-- ✅ MLP baseline
-- ✅ MCUNet training
-- ✅ INT8 quantization
-- ✅ ESP-DL model generation
+- Wi-Fi connection module
+- MQTT client and prediction publishing
+- HTTP JPEG upload to the Raspberry Pi
+- Integration between HTTP upload and MQTT event publication
 
-## Raspberry Pi
+### Pending
 
-- ✅ MQTT Broker
-- ✅ Node-RED
-- ✅ Dashboard
-- ✅ CSV logging
-- ✅ Telegram integration
-
-## ESP32 Firmware
-
-- ✅ ESP-IDF project
-- ✅ ESP-DL integration
-- ✅ Firmware compilation
-- ✅ Flashing
-- 🔄 Model loading and inference
-
----
-
-# Future Improvements
-
-- OTA firmware updates
-- Multiple cameras
-- Remote configuration
-- Web dashboard
-- Edge image compression
-- Power optimization
+- Final firmware build after the latest changes
+- Flash and serial monitor test
+- Wi-Fi connection test
+- MQTT broker connection test
+- MQTT message reception on Raspberry Pi
+- HTTP upload test
+- Validation of `runtime/images/latest.jpg`
+- Node-RED integration test
+- Telegram notification with the real captured image
+- InfluxDB and Grafana final integration
+- Complete end-to-end system test
 
 ---
 

@@ -1,73 +1,170 @@
+# ============================================================
 # Python
+# ============================================================
+
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
+
 .venv/
 venv/
 env/
 
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+
+# ============================================================
 # Jupyter
+# ============================================================
+
 .ipynb_checkpoints/
 
+
+# ============================================================
 # Dataset - do not push large image files
+# ============================================================
+
 dataset/raw/*
 dataset/processed/*
 dataset/rejected/*
 dataset/incoming/*
 dataset/dark_candidates/*
+dataset/splits/*
+dataset/training/*
 
 # Keep dataset directory structure
 !dataset/raw/.gitkeep
 !dataset/processed/.gitkeep
 !dataset/rejected/.gitkeep
 !dataset/incoming/.gitkeep
+!dataset/dark_candidates/.gitkeep
+!dataset/splits/.gitkeep
+!dataset/training/.gitkeep
 
 
-# Keek the folders empty
-!dataset/raw/.gitkeep
-!dataset/processed/.gitkeep
-!dataset/rejected/.gitkeep
+# ============================================================
+# Models - do not push heavy training files
+# ============================================================
 
-# Models - do not push heavy model files
 *.pth
 *.pt
+*.ckpt
 *.onnx
 *.tflite
 *.h5
 
+# Keep the deployable ESP-DL model required by the firmware
+!firmware/esp32_s3_eye_alarm/main/model/
+!firmware/esp32_s3_eye_alarm/main/model/mcunet_int8.espdl
+
+
+# ============================================================
 # Results generated during experiments
+# ============================================================
+
 results/plots/*.png
 results/confusion_matrices/*.png
 results/metrics/*.csv
 
-# Secrets
+results/**/*.pt
+results/**/*.pth
+results/**/*.ckpt
+results/**/*.onnx
+results/**/*.tflite
+results/**/*.h5
+results/**/*.espdl
+results/**/*.info
+results/**/*.json
+
+
+# ============================================================
+# Secrets and local configuration
+# ============================================================
+
 secret.h
+secrets.h
 config/secret.h
+
+firmware/esp32_s3_eye_alarm/main/secrets.hpp
+firmware/esp32_s3_eye_alarm/main/secrets.h
+
 *.pem
 *.key
+*.crt
+*.p12
+
 .env
+.env.*
+
 config.json
 raspberry/config.json
 
+
+# ============================================================
 # OS files
+# ============================================================
+
 .DS_Store
 Thumbs.db
+desktop.ini
 
-# runtime files
-runtime/images/laatest.jpg
+
+# ============================================================
+# Runtime files
+# ============================================================
+
+runtime/images/latest.jpg
+runtime/images/*.jpg
+runtime/images/*.jpeg
+runtime/images/*.png
+
 runtime/events.csv
 runtime/logs/*
+*.log
 
-# Esp32 firmware build files
+
+# ============================================================
+# ESP32 firmware build files
+# ============================================================
+
 firmware/**/build/
 firmware/**/managed_components/
 firmware/**/sdkconfig
 firmware/**/sdkconfig.old
 
 
-# Node modules
-backend/
+# ============================================================
+# Node.js and Node-RED
+# ============================================================
+
+node_modules/
+backend/node_modules/
+
 .node-red/
 flows_cred.json
 *.credentials.json
+
+
+# ============================================================
+# IDE and editor files
+# ============================================================
+
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.history/
+
+
+# ============================================================
+# Temporary files
+# ============================================================
+
+*.tmp
+*.bak
+*.old
+*.orig
