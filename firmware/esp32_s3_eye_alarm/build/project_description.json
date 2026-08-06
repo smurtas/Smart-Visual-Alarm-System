@@ -1,7 +1,7 @@
 {
     "version":            "1.3",
     "project_name":       "smart_visual_alarm",
-    "project_version":    "a728633",
+    "project_version":    "caa7c50-dirty",
     "project_path":       "/home/pi/Desktop/Smart-Visual-Alarm-System/firmware/esp32_s3_eye_alarm",
     "idf_path":           "/home/pi/esp/esp-idf",
     "build_dir":          "/home/pi/Desktop/Smart-Visual-Alarm-System/firmware/esp32_s3_eye_alarm/build",
@@ -1330,7 +1330,7 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "/home/pi/Desktop/Smart-Visual-Alarm-System/firmware/esp32_s3_eye_alarm/build/esp-idf/esp_libc/libesp_libc.a",
-            "sources": [ "/home/pi/esp/esp-idf/components/esp_libc/src/init.c", "/home/pi/esp/esp-idf/components/esp_libc/src/abort.c", "/home/pi/esp/esp-idf/components/esp_libc/src/assert.c", "/home/pi/esp/esp-idf/components/esp_libc/src/heap.c", "/home/pi/esp/esp-idf/components/esp_libc/src/locks.c", "/home/pi/esp/esp-idf/components/esp_libc/src/poll.c", "/home/pi/esp/esp-idf/components/esp_libc/src/pthread.c", "/home/pi/esp/esp-idf/components/esp_libc/src/random.c", "/home/pi/esp/esp-idf/components/esp_libc/src/getentropy.c", "/home/pi/esp/esp-idf/components/esp_libc/src/termios.c", "/home/pi/esp/esp-idf/components/esp_libc/src/stdatomic.c", "/home/pi/esp/esp-idf/components/esp_libc/src/time.c", "/home/pi/esp/esp-idf/components/esp_libc/src/sysconf.c", "/home/pi/esp/esp-idf/components/esp_libc/src/realpath.c", "/home/pi/esp/esp-idf/components/esp_libc/src/scandir.c", "/home/pi/esp/esp-idf/components/esp_libc/src/syscalls.c", "/home/pi/esp/esp-idf/components/esp_libc/src/reent_syscalls.c", "/home/pi/esp/esp-idf/components/esp_libc/src/port/esp_time_impl.c", "/home/pi/esp/esp-idf/components/esp_libc/src/picolibc/picolibc_init.c", "/home/pi/esp/esp-idf/components/esp_libc/src/picolibc/rand.c", "/home/pi/esp/esp-idf/components/esp_libc/src/picolibc/open_memstream.c", "/home/pi/esp/esp-idf/components/esp_libc/src/picolibc/errno.c", "/home/pi/esp/esp-idf/components/esp_libc/src/picolibc/bufio_setvbuf.c", "/home/pi/esp/esp-idf/components/esp_libc/src/picolibc/getreent.c", "/home/pi/esp/esp-idf/components/esp_libc/src/picolibc/fopencookie.c", "/home/pi/esp/esp-idf/components/esp_libc/src/port/esp_time_impl.c" ],
+            "sources": [ "/home/pi/esp/esp-idf/components/esp_libc/src/init.c", "/home/pi/esp/esp-idf/components/esp_libc/src/abort.c", "/home/pi/esp/esp-idf/components/esp_libc/src/assert.c", "/home/pi/esp/esp-idf/components/esp_libc/src/heap.c", "/home/pi/esp/esp-idf/components/esp_libc/src/locks.c", "/home/pi/esp/esp-idf/components/esp_libc/src/poll.c", "/home/pi/esp/esp-idf/components/esp_libc/src/pthread.c", "/home/pi/esp/esp-idf/components/esp_libc/src/random.c", "/home/pi/esp/esp-idf/components/esp_libc/src/getentropy.c", "/home/pi/esp/esp-idf/components/esp_libc/src/termios.c", "/home/pi/esp/esp-idf/components/esp_libc/src/stdatomic.c", "/home/pi/esp/esp-idf/components/esp_libc/src/time.c", "/home/pi/esp/esp-idf/components/esp_libc/src/sysconf.c", "/home/pi/esp/esp-idf/components/esp_libc/src/realpath.c", "/home/pi/esp/esp-idf/components/esp_libc/src/scandir.c", "/home/pi/esp/esp-idf/components/esp_libc/src/syscalls.c", "/home/pi/esp/esp-idf/components/esp_libc/src/reent_syscalls.c", "/home/pi/esp/esp-idf/components/esp_libc/src/port/esp_time_impl.c", "/home/pi/esp/esp-idf/components/esp_libc/src/port/xtensa/stdatomic_s32c1i.c", "/home/pi/esp/esp-idf/components/esp_libc/src/picolibc/picolibc_init.c", "/home/pi/esp/esp-idf/components/esp_libc/src/picolibc/rand.c", "/home/pi/esp/esp-idf/components/esp_libc/src/picolibc/open_memstream.c", "/home/pi/esp/esp-idf/components/esp_libc/src/picolibc/errno.c", "/home/pi/esp/esp-idf/components/esp_libc/src/picolibc/bufio_setvbuf.c", "/home/pi/esp/esp-idf/components/esp_libc/src/picolibc/getreent.c", "/home/pi/esp/esp-idf/components/esp_libc/src/picolibc/fopencookie.c", "/home/pi/esp/esp-idf/components/esp_libc/src/port/esp_time_impl.c" ],
             "include_dirs": [ "platform_include" ]
         },
         "esp_local_ctrl": {
@@ -1450,7 +1450,7 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "/home/pi/Desktop/Smart-Visual-Alarm-System/firmware/esp32_s3_eye_alarm/build/esp-idf/esp_psram/libesp_psram.a",
-            "sources": [ "/home/pi/esp/esp-idf/components/esp_psram/system_layer/esp_psram_mspi.c" ],
+            "sources": [ "/home/pi/esp/esp-idf/components/esp_psram/system_layer/esp_psram_mspi.c", "/home/pi/esp/esp-idf/components/esp_psram/system_layer/esp_psram.c", "/home/pi/esp/esp-idf/components/esp_psram/esp32s3/esp_psram_impl_octal.c", "/home/pi/esp/esp-idf/components/esp_psram/device", "/home/pi/esp/esp-idf/components/esp_psram/xip_impl/mmu_psram_flash.c" ],
             "include_dirs": [ "include", "xip_impl/include" ]
         },
         "esp_ringbuf": {

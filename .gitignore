@@ -42,6 +42,10 @@ results/confusion_matrices/*.png
 results/metrics/*.csv
 
 # Secrets
+secret.h
+config/secret.h
+*.pem
+*.key
 .env
 config.json
 raspberry/config.json
@@ -49,3 +53,21 @@ raspberry/config.json
 # OS files
 .DS_Store
 Thumbs.db
+
+# runtime files
+runtime/images/laatest.jpg
+runtime/events.csv
+runtime/logs/*
+
+# Esp32 firmware build files
+firmware/**/build/
+firmware/**/managed_components/
+firmware/**/sdkconfig
+firmware/**/sdkconfig.old
+
+
+# Node modules
+backend/
+.node-red/
+flows_cred.json
+*.credentials.json

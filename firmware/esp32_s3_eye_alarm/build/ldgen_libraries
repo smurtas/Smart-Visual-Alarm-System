@@ -46,12 +46,12 @@
 /home/pi/Desktop/Smart-Visual-Alarm-System/firmware/esp32_s3_eye_alarm/build/esp-idf/mbedtls/libmbedtls.a
 /home/pi/Desktop/Smart-Visual-Alarm-System/firmware/esp32_s3_eye_alarm/build/esp-idf/esp_security/libesp_security.a
 /home/pi/Desktop/Smart-Visual-Alarm-System/firmware/esp32_s3_eye_alarm/build/esp-idf/esp_driver_dma/libesp_driver_dma.a
+/home/pi/Desktop/Smart-Visual-Alarm-System/firmware/esp32_s3_eye_alarm/build/esp-idf/esp_psram/libesp_psram.a
 /home/pi/Desktop/Smart-Visual-Alarm-System/firmware/esp32_s3_eye_alarm/build/esp-idf/esp_mm/libesp_mm.a
 /home/pi/Desktop/Smart-Visual-Alarm-System/firmware/esp32_s3_eye_alarm/build/esp-idf/efuse/libefuse.a
 /home/pi/Desktop/Smart-Visual-Alarm-System/firmware/esp32_s3_eye_alarm/build/esp-idf/esp_hal_wdt/libesp_hal_wdt.a
 /home/pi/Desktop/Smart-Visual-Alarm-System/firmware/esp32_s3_eye_alarm/build/esp-idf/esp_hal_ana_conv/libesp_hal_ana_conv.a
 /home/pi/Desktop/Smart-Visual-Alarm-System/firmware/esp32_s3_eye_alarm/build/esp-idf/esp_ringbuf/libesp_ringbuf.a
-/home/pi/Desktop/Smart-Visual-Alarm-System/firmware/esp32_s3_eye_alarm/build/esp-idf/esp_psram/libesp_psram.a
 /home/pi/Desktop/Smart-Visual-Alarm-System/firmware/esp32_s3_eye_alarm/build/esp-idf/vfs/libvfs.a
 /home/pi/Desktop/Smart-Visual-Alarm-System/firmware/esp32_s3_eye_alarm/build/esp-idf/esp_driver_usb_serial_jtag/libesp_driver_usb_serial_jtag.a
 /home/pi/Desktop/Smart-Visual-Alarm-System/firmware/esp32_s3_eye_alarm/build/esp-idf/esp_hal_usb/libesp_hal_usb.a
